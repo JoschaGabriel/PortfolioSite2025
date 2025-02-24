@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preamble - Joscha Gabriel Portfolio Website</title>
+    <link rel="icon" type="image/x-icon" href="./image/favicon JG.svg">
+    <link rel="stylesheet" href="styleindex.css">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/motion@latest/dist/motion.js"></script>
+
+</head>
+    <body class="bg-[#171717]">
+        <!-- Header -->
+    <div id="myHeader" class="scroll-section-down justify-between bg-[#17171795] backdrop-blur-md drop-shadow-md  py-2 text-[#858585] h-fit border-b-1 border-[#643B27] fixed top-0 right-0 left-0 z-50 hidden transition ease-in">
+        <div class="w-full px-4 lg:px-24">
+            <div class="flex justify-between">
+                <div class="my-auto">
+                    <img class="w-14" src="./image/hero icon JG.png" alt="">
+                </div>
+                <div class="my-auto h-fit lg:flex gap-8 lg:gap-14 text-md text-[#AD7561] font-semibold hidden">
+                    <div class="hidden lg:inline">Home</div>
+                    <div>Project</div>
+                    <div>Preamble</div>
+                    <div>Contact</div>
+                </div>
+                <div class="menu-button w-8 my-auto inline lg:hidden">
+                    <img src="./image/menu button.svg" alt="">
+                </div>
+                <div class="close-button w-8 my-auto hidden">
+                    <img src="./image/menu close button.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <div id="MobileMenu" class="mobile-menu w-full mt-2 hidden">
+            <div class="menu1 px-6 py-4 bg-[#643B27] active:invert text-[#ECD4C7] font-regular text-2xl">
+                Home
+            </div>
+            <div class="menu2 px-6 py-4 bg-[#745545] active:invert text-[#ECD4C7] font-regular text-2xl">
+                Project
+            </div>
+            <div class="menu3 px-6 py-4 bg-[#465667] active:invert text-[#ECD4C7] font-regular text-2xl">
+                Preamble
+            </div>
+            <div class="menu4 px-6 py-4 bg-[#1C2E41] active:invert text-[#ECD4C7] font-regular text-2xl">
+                Contact
+            </div>
+        </div>
+
+        <script>
+            const menuButton = document.querySelector('.menu-button');
+            const closeMenu = document.querySelector('.close-button');
+            const mobileMenu = document.querySelector('.mobile-menu');
+
+            menuButton.addEventListener('click', () => {
+            mobileMenu.style.display = 'block';
+            menuButton.style.display = 'none';
+            closeMenu.style.display = 'block';
+            });
+
+            closeMenu.addEventListener('click', () => {
+            mobileMenu.style.display = 'none';
+            menuButton.style.display = 'block';
+            closeMenu.style.display = 'none';
+            });
+        </script>
+    </div>
+    <!-- Header End -->
+        
+        <img src="./image/litever/lite-top-right-absolute.svg" alt="" class="right-0 top-0 z-10 absolute animate-pulse">
+        <img src="./image/preamble/asset top left.svg" alt="" class="-left-40 lg:left-0 bottom-1 z-10 absolute animate-pulse">
+
+        <div class="z-40 mt-20 lg:mt-32 overflow-hidden">
+            <div class="mx-10 lg:mx-32 z-40">
+                <div>
+                    <img class="mx-auto" src="./image/preamble/premble_text.svg" alt="" class="w-84 lg:w-96 pt-1 z-40">
+                    <div class="mt-5 text-xl lg:text-2xl w-84 lg:w-[760px] mx-auto text-center font-normal text-[#745545]">Hi! I’m Joscha Gabriel, and I'm a designer.
+                        <br />
+                        <br />
+                        Let me to <span class="font-bold">introduce myself through the powerful concept</span>  known as a "roadmap." My design journey began in the realm of interior design, focusing on the multi-way interactions between humans, spaces, and other individuals. </div>
+                    <div class="font-light text-center text-2xl w-84 lg:w-[680px] text-zinc-500 mx-auto mt-7 mb-28 z-40">// tl;dr //
+                        <br />
+                        this <span class="font-semibold">about</span> page telling my process during work experience period,
+                        <br />
+                        if you looked up for my historical past work, you could 
+                        <br />
+                        check on my <span class="z-40 font-semibold cursor-pointer text-[#ECD4C7]">Resume➚</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="z-10 mt-10 overflow-hidden">
+            <img class="hidden lg:inline-block w-full" src="./image/preamble/desktop roadmap.svg" alt="">
+            <img class="inline-block lg:hidden w-full" src="./image/preamble/mobile roadmap.svg" alt="">
+        </div>
+
+        <div class="z-10 mt-24 overflow-hidden">
+            <hr class="border-0.5 border-[#643B27] w-full" />
+            <div class="mx-6 lg:mx-32 justify-between my-4 lg:my-12">
+                <div class="justify-between w-full gap-14 mt-0 lg:mt-8">
+                    <div class="text-[#858585] text-lg lg:text-xl font-normal">
+                        If you finally reached this part, I believe we should talk. <br /> I’m here - ready to answer - ready to help - ready to work with. together.
+                    </div>
+                    <div class="flex gap-5 mt-4">
+                        <div class="w-fit bg-[#745545] text-[#ECD4C7] px-3 py-2 gap-2 flex rounded-lg hover:brightness-110 cursor-pointer">
+                            <div class="my-auto">
+                                <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2 16C1.45 16 0.979167 15.8042 0.5875 15.4125C0.195833 15.0208 0 14.55 0 14V2C0 1.45 0.195833 0.979167 0.5875 0.5875C0.979167 0.195833 1.45 0 2 0H18C18.55 0 19.0208 0.195833 19.4125 0.5875C19.8042 0.979167 20 1.45 20 2V14C20 14.55 19.8042 15.0208 19.4125 15.4125C19.0208 15.8042 18.55 16 18 16H2ZM10 9L2 4V14H18V4L10 9ZM10 7L18 2H2L10 7ZM2 4V2V14V4Z" fill="#ECD4C7"/>
+                                    </svg>                        
+                            </div>
+                            <div class="text-xl text-[#ECD4C7]">Email me</div>
+                        </div>
+                        <div class="text-xl text-[#858585] my-auto">or</div>
+                        <div class="flex gap-2 w-fit cursor-pointer hover:brightness-120">
+                            <div class="my-auto">
+                                <svg width="33" height="34" viewBox="0 0 33 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8.46629 12.1693C8.7346 11.0746 9.73907 9.77037 10.5096 9.52033C10.6128 9.48654 11.0187 9.47303 11.4178 9.48654C11.9117 9.50503 12.0679 9.51087 12.1789 9.58401C12.2302 9.61784 12.2719 9.66606 12.3328 9.73658C12.6217 10.0677 13.9633 13.2708 13.9633 13.6222C13.9633 13.9196 13.7775 14.2237 13.0276 15.1427C12.7868 15.4401 12.6561 15.6631 12.6561 15.7847C12.6561 16.1564 13.75 17.6363 14.7063 18.5621C15.0228 18.8662 15.5663 19.3122 15.9103 19.5555C16.6327 20.0691 18.3871 20.9476 18.676 20.9476C18.9031 20.9476 19.2402 20.63 19.9557 19.7244C20.6505 18.8392 20.6643 18.8257 21.0221 18.8797C21.3179 18.9203 24.5101 20.3664 24.8404 20.6164C24.9917 20.7246 25.0055 20.7854 24.9986 21.2652C24.9849 21.8801 24.8266 22.5559 24.5858 22.9546C24.2212 23.5696 23.086 24.3264 22.1779 24.5629C21.5931 24.7116 20.3341 24.6981 19.6392 24.5359C18.3114 24.2183 16.3025 23.3601 15.1466 22.6167C13.3648 21.4679 11.7411 19.8934 10.2413 17.8661C8.59013 15.636 8.0535 13.8993 8.46629 12.1693Z" fill="#AD7561"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.65225 3.86789C9.23287 1.93751 12.1102 0.879585 15.5533 0.584189C16.1881 0.529232 18.1339 0.625407 18.9895 0.749061C25.9793 1.77264 31.5959 7.23403 32.762 14.1449C33.3347 17.5454 32.8724 20.8909 31.3889 24.0029C30.416 26.0638 28.6979 28.2346 26.9177 29.6704C25.0892 31.1336 22.8053 32.2602 20.5214 32.8304C16.8988 33.7304 12.8623 33.3319 9.52957 31.745L8.68087 31.3397L4.35454 32.4732C1.97402 33.0983 0.014408 33.593 0.000607866 33.5792C-0.0200923 33.5655 0.490511 31.6557 1.13222 29.3406L2.29142 25.1227L1.95332 24.4975C1.09772 22.8694 0.504311 20.9802 0.228309 18.9537C0.0972085 17.9919 0.111009 15.67 0.25591 14.6945C0.718213 11.6787 1.92572 8.90336 3.78873 6.62263C4.45804 5.80514 5.83805 4.47242 6.65225 3.86789ZM26.1518 7.37142C24.0128 5.24869 21.3908 3.93659 18.4789 3.53815C16.3744 3.24962 14.5183 3.40075 12.5242 4.01902C7.81146 5.48226 4.20964 9.44606 3.23673 14.248C2.54673 17.6691 3.15393 21.0558 5.01694 24.0922L5.36884 24.6624L4.69954 27.108C4.32694 28.4544 4.04404 29.5673 4.05784 29.5811C4.07164 29.5948 5.21704 29.3132 6.60395 28.9559L9.11557 28.2964L9.72968 28.6468C11.1718 29.478 12.7243 30.0276 14.4838 30.3367C15.4291 30.4947 17.6578 30.4947 18.6238 30.3367C21.9842 29.7597 24.8546 28.1384 26.9936 25.5829C28.4081 23.8998 29.4293 21.7909 29.8709 19.6544C30.7955 15.1548 29.4293 10.6414 26.1518 7.37142Z" fill="#AD7561"/>
+                                    </svg>                        
+                            </div>
+                            <div class="text-xl text-[#AD7561] my-auto font-semibold">Hit me via Whatsapp</div>
+                        </div>
+                    </div>
+                </div>      
+            </div>
+            <hr class="border-0.5 border-[#643B27] w-full my-4" />
+        </div>
+
+        <!-- Footer Lite -->
+        <div class="flex px-5 lg:px-32 my-8 text-[#858585] justify-between h-fit gap-2">
+            <div class="flex gap-2">
+                <div class="my-auto">
+                    <img class="w-10" src="./image/footer icon JG.png" alt="">
+                </div>
+                <div class="my-auto">2025 © Joscha Gabriel</div>
+            </div>
+            <div>
+                <a class="font-bold text-[#745545] flex gap-2 hover:brightness-110 cursor-pointer" href="#">
+                    <div class="my-auto">Back to Top</div>
+                    <img class="h-12 my-auto" src="./image/arrow_backtotop.svg" alt="">
+                </a>
+            </div>
+        </div>
+        <!-- Footer Component End -->
+
+        <script>
+            const header = document.getElementById('myHeader');
+            const body = document.body;
+            let lastScrollTop = 0;
+          
+            window.addEventListener('scroll', () => {
+              let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+          
+              if (scrollTop > lastScrollTop) { // Scrolling down
+                header.classList.remove('hidden');
+                body.classList.add('body-padding'); // Add padding when header is visible
+              } else { // Scrolling up
+                header.classList.add('hidden');
+                body.classList.remove('body-padding'); // Remove padding when header is hidden
+              }
+              lastScrollTop = scrollTop;
+            });
+
+            const { animate, inView } = window.Motion
+
+            inView(".menu1", (element) => {
+                animate(element, { opacity: 1,  x: 0,  y: 0 })
+
+                return () => animate(element, { opacity: 0, y: -100, duration: 180 })
+                })
+
+            inView(".menu2", (element) => {
+                animate(element, { opacity: 1,  x: 0,  y: 0 })
+
+                return () => animate(element, { opacity: 0, y: -150, duration: 190 })
+                })
+
+            inView(".menu3", (element) => {
+                animate(element, { opacity: 1,  x: 0,  y: 0 })
+
+                return () => animate(element, { opacity: 0, y: -200, duration: 200 })
+                })
+            
+            inView(".menu4", (element) => {
+                animate(element, { opacity: 1,  x: 0,  y: 0 })
+
+                return () => animate(element, { opacity: 0, y: -250, duration: 210 })
+                })
+        </script>
+    </body>
+</html>

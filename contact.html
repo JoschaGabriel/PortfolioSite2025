@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Joscha Gabriel Portfolio Website</title>
+    <link rel="icon" type="image/x-icon" href="./image/favicon JG.svg">
+    <link rel="stylesheet" href="styleindex.css">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/motion@latest/dist/motion.js"></script>
+
+</head>
+    <body class="bg-[#171717]">
+        <!-- Header -->
+        <div id="myHeader" class="scroll-section-down justify-between bg-[#17171795] backdrop-blur-md drop-shadow-md  py-2 text-[#858585] h-fit border-b-1 border-[#643B27] fixed top-0 right-0 left-0 z-50 hidden transition ease-in">
+            <div class="w-full px-4 lg:px-24">
+                <div class="flex justify-between">
+                    <div class="my-auto">
+                        <img class="w-14" src="./image/hero icon JG.png" alt="">
+                    </div>
+                    <div class="my-auto h-fit lg:flex gap-8 lg:gap-14 text-md text-[#AD7561] font-semibold hidden">
+                        <div class="hidden lg:inline">Home</div>
+                        <div>Project</div>
+                        <div>Preamble</div>
+                        <div>Contact</div>
+                    </div>
+                    <div class="menu-button w-8 my-auto inline lg:hidden">
+                        <img src="./image/menu button.svg" alt="">
+                    </div>
+                    <div class="close-button w-8 my-auto hidden">
+                        <img src="./image/menu close button.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div id="MobileMenu" class="mobile-menu w-full mt-2 hidden">
+                <div class="menu1 px-6 py-4 bg-[#643B27] active:invert text-[#ECD4C7] font-regular text-2xl">
+                    Home
+                </div>
+                <div class="menu2 px-6 py-4 bg-[#745545] active:invert text-[#ECD4C7] font-regular text-2xl">
+                    Project
+                </div>
+                <div class="menu3 px-6 py-4 bg-[#465667] active:invert text-[#ECD4C7] font-regular text-2xl">
+                    Preamble
+                </div>
+                <div class="menu4 px-6 py-4 bg-[#1C2E41] active:invert text-[#ECD4C7] font-regular text-2xl">
+                    Contact
+                </div>
+            </div>
+
+            <script>
+                const menuButton = document.querySelector('.menu-button');
+                const closeMenu = document.querySelector('.close-button');
+                const mobileMenu = document.querySelector('.mobile-menu');
+
+                menuButton.addEventListener('click', () => {
+                mobileMenu.style.display = 'block';
+                menuButton.style.display = 'none';
+                closeMenu.style.display = 'block';
+                });
+
+                closeMenu.addEventListener('click', () => {
+                mobileMenu.style.display = 'none';
+                menuButton.style.display = 'block';
+                closeMenu.style.display = 'none';
+                });
+            </script>
+        </div>
+        <!-- Header End -->
+
+        <div class="z-50 mt-14 lg:mt-24 mb-24 overflow-hidden">
+            <div class="mx-8 lg:mx-32 z-50">
+                <div class="mx-auto">
+                    <img class="w-100 lg:w-300 top-0 z-10 absolute animate-pulse" src="./image/contact/top-center.svg" alt="" >
+                </div>
+                <div class="w-full">
+                    <img class="mx-auto scale-150 w-56 lg:w-80 pt-1 z-40" src="./image/contact/contact-text.svg" alt="">
+                    <div class="relative flex w-60 mt-12">
+                        <div>
+                            <img src="./image/litever/circle-image-hero.png" alt="" class="w-60 pt-1 z-4">
+                        </div>
+                        <div class="absolute top-0 right-8 p-4">
+                            <div class="absolute h-9 w-9 rounded-full bg-[#6D8A5B] animate-ping z-50 left-1"></div>
+                            <div class="absolute h-9 w-9 rounded-full bg-[#6D8A5B] rounded-full top-4 left-1 border-5 border-white"></div>
+                        </div>
+                    </div>
+                    <div class="mt-10 text-xl lg:text-2xl w-84 lg:w-[760px] text-left font-normal text-[#858585]">
+                        Here the full contact that you would hit me up. <br /> Let we share vision and design strategy.
+                    </div>
+                    <div class="mt-6 text-md lg:text-2xl w-84 lg:w-[760px] text-left font-normal text-[#858585]">
+                        Contact by email - joschagabriel@gmail.com or <span class="font-semibold text-[#ECD4C7]"><a href="#">hit this link ➙</a></span>
+                    </div>
+                    <div class="mt-6 text-md lg:text-2xl w-84 lg:w-[760px] text-left font-normal text-[#858585] inline-block lg:flex gap-2">
+                        <div class="">Direct real-time chat could accessed on</div>
+                        <div class="my-auto cursor-pointer ml-1">
+                            <img class="w-28 lg:w-36" src="./image/contact/whatsapp icon.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <img src="./image/preamble/asset top left.svg" alt="" class="-left-40 lg:left-0 top-64 lg:top-42 -z-10 absolute">
+        <img src="./image/contact/asset-right-center.svg" alt="" class="animate-pulse mt-40 right-0 top-80 lg:top-96 -z-10 absolute">
+        <img src="./image/contact/contact-bg.svg" alt="" class="w-full saturate-200 animate-pulse top-0 -z-20 absolute">
+
+        <!-- Footer Lite -->
+        <div class="inline-block lg:flex px-8 lg:px-32 my-8 text-[#858585] justify-between h-fit gap-2">
+            <div class="flex gap-20 lg:hidden">
+                <a class="font-semibold text-[#858585] flex gap-2 hover:brightness-110 cursor-pointer leading-4" href="#">
+                    <div class="my-auto">➚ <br />Linkedin</div>
+                </a>
+                <a class="font-semibold text-[#858585] flex gap-2 hover:brightness-110 cursor-pointer leading-4" href="#">
+                    <div class="my-auto">➚ <br />Dribbble</div>
+                </a>
+                <a class="font-semibold text-[#858585] flex gap-2 hover:brightness-110 cursor-pointer leading-4" href="#">
+                    <div class="my-auto">➚ <br />Instagram</div>
+                </a>
+            </div>
+            <div class="flex gap-2 mt-4 lg:mt-0">
+                <div class="my-auto">
+                    <img class="w-10" src="./image/footer icon JG.png" alt="">
+                </div>
+                <div class="my-auto">2025 © Joscha Gabriel</div>
+            </div>
+            <div class="lg:flex gap-20 hidden">
+                <a class="font-semibold text-[#858585] flex gap-2 hover:brightness-110 cursor-pointer leading-4" href="#">
+                    <div class="my-auto">➚ <br />Linkedin</div>
+                </a>
+                <a class="font-semibold text-[#858585] flex gap-2 hover:brightness-110 cursor-pointer leading-4" href="#">
+                    <div class="my-auto">➚ <br />Dribbble</div>
+                </a>
+                <a class="font-semibold text-[#858585] flex gap-2 hover:brightness-110 cursor-pointer leading-4" href="#">
+                    <div class="my-auto">➚ <br />Instagram</div>
+                </a>
+            </div>
+        </div>
+        <!-- Footer Component End -->
+
+        <script>
+            const header = document.getElementById('myHeader');
+            const body = document.body;
+            let lastScrollTop = 0;
+          
+            window.addEventListener('scroll', () => {
+              let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+          
+              if (scrollTop > lastScrollTop) { // Scrolling down
+                header.classList.remove('hidden');
+                body.classList.add('body-padding'); // Add padding when header is visible
+              } else { // Scrolling up
+                header.classList.add('hidden');
+                body.classList.remove('body-padding'); // Remove padding when header is hidden
+              }
+              lastScrollTop = scrollTop;
+            });
+
+            const { animate, inView } = window.Motion
+
+            inView(".menu1", (element) => {
+                animate(element, { opacity: 1,  x: 0,  y: 0 })
+
+                return () => animate(element, { opacity: 0, y: -100, duration: 180 })
+                })
+
+            inView(".menu2", (element) => {
+                animate(element, { opacity: 1,  x: 0,  y: 0 })
+
+                return () => animate(element, { opacity: 0, y: -150, duration: 190 })
+                })
+
+            inView(".menu3", (element) => {
+                animate(element, { opacity: 1,  x: 0,  y: 0 })
+
+                return () => animate(element, { opacity: 0, y: -200, duration: 200 })
+                })
+            
+            inView(".menu4", (element) => {
+                animate(element, { opacity: 1,  x: 0,  y: 0 })
+
+                return () => animate(element, { opacity: 0, y: -250, duration: 210 })
+                })
+        </script>
+    </body>
+</html>

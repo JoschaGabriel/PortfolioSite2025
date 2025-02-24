@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joscha Gabriel Portfolio Website</title>
+    <link rel="icon" type="image/x-icon" href="./image/favicon JG.svg">
+    <link rel="stylesheet" href="styleindex.css">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/motion@latest/dist/motion.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+    <script src="./anime.js"></script>
+    <script src="https://unpkg.com/powerglitch@latest/dist/powerglitch.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://unpkg.com/htmx.org@2.0.4" integrity="sha384-HGfztofotfshcF7+8n44JQL2oJmowVChPTg48S+jvZoztPfvwD79OC/LTtG6dMp+" crossorigin="anonymous"></script>
+</head>
+
+    <style>
+            .caveat-im {
+    font-family: "Caveat", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    }
+    </style>
+
+<body class="bg-[#171717]">
+    <!-- Header -->
+    <div id="myHeader" class="scroll-section-down justify-between bg-[#17171795] backdrop-blur-md drop-shadow-md  py-2 text-[#858585] h-fit border-b-1 border-[#643B27] fixed top-0 right-0 left-0 z-50 hidden transition ease-in">
+        <div class="w-full px-4 lg:px-24">
+            <div class="flex justify-between">
+                <div class="my-auto">
+                    <img class="w-14" src="./image/hero icon JG.png" alt="">
+                </div>
+                <div class="my-auto h-fit lg:flex gap-8 lg:gap-14 text-lg text-[#AD7561] font-semibold hidden">
+                    <div class="hidden lg:inline">Home</div>
+                    <div>Project</div>
+                    <div>Preamble</div>
+                    <div>Contact</div>
+                </div>
+                <div class="menu-button w-8 my-auto inline lg:hidden">
+                    <img src="./image/menu button.svg" alt="">
+                </div>
+                <div class="close-button w-8 my-auto hidden">
+                    <img src="./image/menu close button.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <div id="MobileMenu" class="mobile-menu w-full mt-2 hidden">
+            <div class="menu1 px-6 py-4 bg-[#643B27] active:invert text-[#ECD4C7] font-regular text-2xl">
+                Home
+            </div>
+            <div class="menu2 px-6 py-4 bg-[#745545] active:invert text-[#ECD4C7] font-regular text-2xl">
+                Project
+            </div>
+            <div class="menu3 px-6 py-4 bg-[#465667] active:invert text-[#ECD4C7] font-regular text-2xl">
+                Preamble
+            </div>
+            <div class="menu4 px-6 py-4 bg-[#1C2E41] active:invert text-[#ECD4C7] font-regular text-2xl">
+                Contact
+            </div>
+        </div>
+
+        <script>
+            const menuButton = document.querySelector('.menu-button');
+            const closeMenu = document.querySelector('.close-button');
+            const mobileMenu = document.querySelector('.mobile-menu');
+
+            menuButton.addEventListener('click', () => {
+            mobileMenu.style.display = 'block';
+            menuButton.style.display = 'none';
+            closeMenu.style.display = 'block';
+            });
+
+            closeMenu.addEventListener('click', () => {
+            mobileMenu.style.display = 'none';
+            menuButton.style.display = 'block';
+            closeMenu.style.display = 'none';
+            });
+        </script>
+    </div>
+    <!-- Header End -->
+
+    <!-- pop up tl dr -->
+    <div id="pop-up-home" class="popup scroll-section-left lg:w-75 h-25 z-50 right-20 lg:right-10 absolute fixed mt-22 lg:mt-24">
+            <button id="closePopup" class="bg-[#F1F1EF] w-8 h-8 mx-auto text-center text-[#404040] text-md font-bold py-0.5 border-1 border-[#C0C0C0] rounded-full absolute -top-4 -right-4 cursor-pointer">X</button>
+            <div class="w-75 text-black bg-[#E2DFDB] rounded-xl flex shadow-lg shadow-[#ffffff50]">
+            <div class="w-13 text-3xl mx-auto px-3 my-auto">
+                💡
+            </div>
+            <div class="w-62 text-sm lg:text-md p-2 bg-[#F1F1EF] border border-[#DBE1E2] rounded-xl shadow-lg leading-5 text-[#404040]">Are you <span class="font-bold">HR</span> or my <span class="font-bold">Future Users/Lead?</span> This website would be too long to read, <span class="text-[#9E7A68] underline font-semibold"><a href="#">click here for simple version website ➙</a></span></div>
+        </div>
+    </div>
+    <!-- pop up tl dr -->
+
+    <div class="overflow-hidden container">
+        <img src="./image/radial top left.svg" alt="" class="top-0 left-0 scale-100 lg:scale-150 saturate-150 z-20 absolute animate-pulse hover:saturate-200 hover:blur-xs hover:transition">
+        <img src="./image/background line.svg" alt="" class="mx-auto w-screen -z-10 absolute overflow-hidden animate-pulse saturate-200">
+        <div class="opacity-0 main-text-logo px-7 pt-40 lg:pt-20 mx-auto">
+            <img src="./image/hero icon JG.png" alt="" class="mx-auto h-[115px] w-[94px] pt-8 z-30 hover:invert">
+        </div>
+        <div class="caveat-im main-text-hi opacity-0 w-fit p-2 mx-auto text-center text-[#AD7561] text-5xl pt-8 hover:invert">Hi, I'm</div>
+        <div class="main-text-in opacity-0 w-fit my-8 mx-auto hover:skew-2 hover:saturate-150 hover:transition">
+            <img src="./image/hero text joscha.svg" alt="" class="glitch mx-auto mt-6 w-90 lg:w-[500px]">
+        </div>
+        <div class="main-text-ui opacity-0 p-2 mx-auto mb-20 text-center text-[#ECD4C7] text-xl hover:font-semibold hover:saturate-150">UI/UX Designers • UI Engineer</div>
+        <a class="main-text-link opacity-0 mx-auto text-center text-[#9E7A68] text-lg mt-36 pt-36 animate-bounce z-40" href="#ScrollMore">
+                <div class="text-center animate-bounce py-1 px-2 bg-[#382E2900] hover:font-semibold hover:bg-[#251F1C90] hover:brightness-120 w-fit mx-auto rounded-lg">↓  Scroll down to explore more  ↓</div>
+        </a>
+        <img src="./image/asset hero radial left bottom.svg" alt="" class=" hidden lg:inline bottom-0 right-0 z-1 absolute animate-pulse hover:saturate-200 hover:blur-xs hover:transition">
+        <img src="./image/asset right bottom hero 1.svg" alt="" class="lg:inline-block hidden bottom-20 right-0 z-1 absolute hover:saturate-150 hover:transition">
+        <img src="./image/asset right bottom hero 2.svg" alt="" class="hidden lg:inline-block bottom-0 right-0 z-1 absolute hover:saturate-150 hover:transition">
+        <!-- Custom Cursor Hero -->
+        <div class="cursor-source fixed animate-spin">
+            <svg class="" width="44" height="43" viewBox="0 0 44 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g class="">
+                <path class="backdrop-invert opacity-80" d="M18.3249 42.544C18.7516 42.5201 19.2629 42.3065 19.5847 42.0083L19.895 41.7157L21.7636 36.392C22.7892 33.4523 23.6436 31.0628 23.6606 31.0687C23.6861 31.0775 25.2661 32.8899 27.1911 35.1071C29.1076 37.3214 30.7774 39.2315 30.9097 39.3438C31.4754 39.8535 32.597 39.9651 33.1845 39.5588C33.8663 39.0995 38.0163 35.4022 38.2103 35.0884C38.5259 34.5882 38.5791 33.9116 38.3604 33.3885C38.2274 33.0855 37.1226 31.742 34.614 28.847C32.6468 26.5866 31.0505 24.7115 31.0623 24.6775C31.074 24.6435 33.4875 24.1543 36.4306 23.5911C40.1915 22.8631 41.8901 22.4886 42.1819 22.3324C42.8657 21.9499 43.2126 21.1939 43.0975 20.3163C42.9434 19.111 41.9627 14.3544 41.8068 14.0625C41.5094 13.4646 40.6733 12.9947 39.9989 13.0473C39.8254 13.0539 37.3325 13.5252 34.4577 14.0834C31.5744 14.6387 29.2125 15.0886 29.187 15.0798C29.17 15.074 29.9735 12.6668 30.9792 9.72975L32.7997 4.37998L32.7196 3.92386C32.6712 3.67864 32.5078 3.29845 32.3624 3.08633L32.0768 2.70199L28.6957 1.53334L25.3145 0.364691L24.8526 0.490635C24.6072 0.56768 24.2439 0.765814 24.0544 0.928819L23.7098 1.23812L21.8382 6.57028C20.8156 9.50147 19.9611 11.891 19.9356 11.8822C19.9187 11.8763 18.3302 10.061 16.4137 7.84671C14.4972 5.6324 12.8274 3.72235 12.695 3.60996C12.1464 3.10614 10.945 3.00508 10.3889 3.40317C9.61499 3.96397 5.57117 7.57418 5.39444 7.86536C5.07888 8.36562 5.0257 9.04225 5.2499 9.57674C5.37442 9.87684 6.46813 11.1974 8.99931 14.1097C10.955 16.3757 12.5513 18.2508 12.5425 18.2763C12.5337 18.3018 10.1173 18.7995 7.17416 19.3627C3.05714 20.158 1.72903 20.4511 1.41702 20.6384C0.904748 20.9374 0.557497 21.4743 0.491239 22.0512C0.450113 22.4178 1.43126 27.8887 1.68391 28.671C1.89506 29.3533 2.84624 29.9582 3.60588 29.9065C3.77937 29.8999 6.27226 29.4286 9.14708 28.8704C12.0219 28.3121 14.3923 27.8652 14.4093 27.871C14.4347 27.8799 13.6313 30.287 12.6227 33.2326L10.8051 38.5738L10.8852 39.03C10.9335 39.2752 11.0969 39.6554 11.2424 39.8675L11.528 40.2518L14.8013 41.4022C16.8457 42.1184 18.1713 42.548 18.3249 42.544Z" fill="#ECD4C7"/>
+                </g>
+            </svg>                                          
+        </div>
+        <!-- Custom Cursor Hero End -->
+    </div>
+    
+    <div data-scroll class="scroll-section-right z-10 mt-40 overflow-hidden cursor-grabbing">
+        <img src="./image/asset left bottom hero 2.svg" alt="" class="left-1 z-1 absolute">
+        <div class="mx-32">
+            <img src="./image/hero text Connoisseur.png" alt="" class="glitch w-90 pt-8 z-4">
+            <div class="text-5xl font-bold text-[#745545]">of Functional  Design</div>
+            <div class="w-84 lg:w-[550px] text-3xl lg:text-5xl font-bold text-[#745545] mt-7">An admirer of Evocative Sentences.</div>
+            <div class="font-light text-xl lg:text-3xl w-84 lg:w-[750px] text-zinc-500 mt-7 mb-28">Prefer to be a passionate designer, combining aesthetics and problem-solving for intended to be a great user experience.</div>
+        </div>
+    </div>
+
+    <div id="" class="bg-[#271D1D] p-18 lg:p-24 z-40 cursor-pointer container-text">
+        <div class="scroll-section-up p-4 mx-auto w-fit text-center bg-[#2A231F] text-[56px] rounded-2xl">💻🎨📱</div>
+        <div class="scroll-section-up mx-auto text-center text-xl lg:text-2xl text-[#858585] w-86 lg:w-[700px] mt-12 hover-text">Creative experience in <span class="text-link1 underline text-[#9E7A68] hover:brightness-120 hover:cursor-grabbing hover:font-semibold">B2B e-commerce</span>, <span class="text-link2 hover:cursor-grabbing underline text-[#9E7A68] hover:brightness-120 hover:cursor-pointer hover:font-semibold">hospitality</span>, <span class="text-link3 hover-text underline text-[#9E7A68] hover:brightness-120 hover:cursor-grabbing hover:font-semibold">Cryptocurrency</span>, and <span class="text-link4 hover-text underline text-[#9E7A68] hover:brightness-120 hover:cursor-grabbing hover:font-semibold">industrial sector</span>, provide with vast breadth of inspiration to draw form.</div>
+        <div class="image-popup1 object-cover hidden absolute left-4 transition-transform rounded-xl z-50 w-75 h-50">
+            <img class="rounded-lg" src="./Porto Image/_IDH.jpg" alt="Another Image">
+        </div>
+        <div class="image-popup2 object-cover hidden absolute left-4 transition-transform rounded-xl z-50 w-75 h-50">
+            <img class="rounded-lg" src="./Porto Image/_Cove.jpg" alt="Another Image">
+        </div>
+        <div class="image-popup3 object-cover hidden absolute left-4 transition-transform rounded-xl z-50 w-75 h-50">
+            <img class="rounded-lg" src="./Porto Image/_100E.jpg" alt="Another Image">
+        </div>
+        <div class="image-popup4 object-cover hidden absolute left-4 transition-transform rounded-xl z-50 w-75 h-50">
+            <img class="rounded-lg" src="./Porto Image/_Otsu.jpg" alt="Another Image">
+        </div>
+        <div class="scroll-section-up mx-auto text-center text-xl lg:text-2xl text-[#858585] w-86 lg:w-[700px] mt-12">A believer that if you’re willing to embrace the unconventional and some compelling content, on the way to making something great. All that’s left is to find anyone who can pull the colorful pallette out of the vase.</div>
+    </div>
+
+    <div id="ScrollMore" class="">
+        <div class="py-1">
+            <img src="./image/work text.svg" alt="" class="scroll-section-up py-20 w-96 lg:w-[450px] mx-auto z-4">
+            <div class="mx-auto w-96 lg:w-[1160px] grid grid-cols-1 lg:grid-cols-2 gap-10 mb-28">
+                <div class="scroll-section-up w-fit h-fit">
+                    <a href="">
+                        <img class="bg-[#D9D9D9] transition ease-in duration-300 hover:-translate-y-1 hover:scale-105 transition-transform hover:rounded-3xl hover:shadow-lg hover:shadow-[#ffffff50] rounded-2xl w-96 lg:w-[560px] h-[420px]" src="" alt="">
+                        <div class="mt-3 text-[#AD7561] font-bold text-3xl hover:brightness-120">{Title.1}</div>
+                        <div class="mt-3 text-[#858585] w-96 lg:w-[560px]">How to talk about this in two line How to talk about this in two line How to talk about this in two line</div>
+                    </a>
+                    <div class="mt-3 w-96 lg:w-[560px] justify-between flex">
+                        <div></div>
+                        <a class="w-fit hover:brightness-120" href="#">
+                            <img src="./image/arrow blog button.svg" alt="">
+                        </a>
+                    </div>
+                    <hr class="mt-3 border border-b-[#858585] w-96 lg:w-[560px]" />
+                </div>
+                <div class="scroll-section-up w-fit h-fit">
+                    <a href="#">
+                        <img class="bg-[#D9D9D9] transition ease-in duration-300 hover:-translate-y-1 hover:scale-105 transition-transform hover:rounded-3xl hover:shadow-lg hover:shadow-[#ffffff50] rounded-2xl w-96 lg:w-[560px] h-[420px]" src="" alt="">
+                        <div class="mt-3 text-[#AD7561] font-bold text-3xl hover:brightness-120">{Title.2}</div>
+                        <div class="mt-3 text-[#858585] w-96 lg:w-[560px]">How to talk about this in two line How to talk about this in two line How to talk about this in two line</div>
+                    </a>
+                    <div class="mt-3 w-96 lg:w-[560px] justify-between flex">
+                        <div></div>
+                        <a class="w-fit hover:brightness-120" href="#">
+                            <img src="./image/arrow blog button.svg" alt="">
+                        </a>
+                    </div>
+                    <hr class="mt-3 border border-b-[#858585] w-96 lg:w-[560px]" />
+                </div>
+                <div class="scroll-section-up w-fit h-fit">
+                    <a href="#">
+                        <img class="bg-[#D9D9D9] transition ease-in duration-300 hover:-translate-y-1 hover:scale-105 transition-transform hover:rounded-3xl hover:shadow-lg hover:shadow-[#ffffff50] rounded-2xl w-96 lg:w-[560px] h-[420px]" src="" alt="">
+                        <div class="mt-3 text-[#AD7561] font-bold text-3xl hover:brightness-120">{Title.3}</div>
+                        <div class="mt-3 text-[#858585] w-96 lg:w-[560px]">How to talk about this in two line How to talk about this in two line How to talk about this in two line</div>
+                    </a>
+                    
+                    <div class="mt-3 w-96 lg:w-[560px] justify-between flex">
+                        <div></div>
+                        <a class="w-fit hover:brightness-120" href="#">
+                            <img src="./image/arrow blog button.svg" alt="">
+                        </a>
+                    </div>
+                    <hr class="mt-3 border border-b-[#858585] w-96 lg:w-[560px]" />
+                </div>
+                <div class="scroll-section-up w-fit h-fit">
+                    <a href="#">
+                        <img class="bg-[#D9D9D9] transition ease-in duration-300 hover:-translate-y-1 hover:scale-105 transition-transform hover:rounded-3xl hover:shadow-lg hover:shadow-[#ffffff50] rounded-2xl w-96 lg:w-[560px] h-[420px]" src="" alt="">
+                        <div class="mt-3 text-[#AD7561] font-bold text-3xl hover:brightness-120">{Title.4}</div>
+                        <div class="mt-3 text-[#858585] w-96 lg:w-[560px]">How to talk about this in two line How to talk about this in two line How to talk about this in two line</div>
+                    </a>
+                    <div class="mt-3 w-96 lg:w-[560px] justify-between flex">
+                        <div></div>
+                        <a class="w-fit hover:brightness-120" href="#">
+                            <img src="./image/arrow blog button.svg" alt="">
+                        </a>
+                    </div>
+                    <hr class="mt-3 border border-b-[#858585] w-96 lg:w-[560px]" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-[#F8F3ED] p-12 lg:p-40 z-40">
+        <div class="justify-between flex my-auto">
+            <div class="text-3xl font-semibold text-[#AD7561] flex gap-2 lg:gap-4 my-auto">
+                <div class="my-auto">Other Project List</div>
+                <img class="my-auto animate-spin" src="./image/project list asterix.svg">
+            </img>
+            </div>
+            <a class="w-fit hover:brightness-120 bg-[#745545] py-1 px-3 rounded-lg text-white my-auto" href="#">View All ➟</a>
+        </div>
+
+        <div class="mx-auto w-full grid grid-cols-1 lg:grid-cols-4 gap-4 mb-6 mt-10">
+            <div class="group hidden lg:inline" data-group="service">
+                <div class="text-2xl text-[#745545] font-semibold mb-2">Service</div>
+                <div class="ml-4 text-lg text-[#C1A090] gap-2 [&>*]:hover:cursor-pointer">
+                    <div class="item" data-item="mobile-app" data-targets="savingg-app, effect-fx, baud-kids-app, figma, 2023, 2024">Mobile App Design</div>
+                    <div class="item" data-item="website" data-targets="id-lite-net, mama-rent-pump, jnj-data-recovery, algorithm-studio,solusi-sarana-persada, pt-hlks, alexander-photo-bridal, alexander-photo-studio, mazda-batam, rumahdi-bsd, kawaii-photo-studio, space-marker-studio, this-website, 2023, 2024, 2025, penpot, figma, html5, wordpress, tailwindcss, motiondev, lenis, framer, htmx">Website</div>
+                    <div class="item" data-item="webapp" data-targets="monitoring-pupuk, html5, tailwindcss, 2023">Web App</div>
+                </div>
+            </div>
+            <div class="group" data-group="projects">
+                <div class="text-2xl text-[#745545] font-semibold mb-2">Selected Projects</div>
+                
+                <div class="ml-4 text-lg text-[#C1A090] gap-2 [&>*]:hover:cursor-pointer">
+                    <div class="item work-link1" data-item="id-lite-net" data-targets="website, wordpress, 2024, figma, tailwindcss">ID Lite Net
+                        <div class="work-popup1 hidden absolute left-40 transition-transform rounded-lg z-50 w-75 h-50">
+                            <img class="rounded-2xl" src="./Porto Image/IDLiteNet.jpg" alt="Another Image">
+                        </div>
+                        <script>
+                            // Text Hover 1
+                            const workLink1 = document.querySelector('.work-link1');
+                            const popupwork1 = document.querySelector('.work-popup1');
+        
+                            workLink1.addEventListener('mouseover', () => {
+                                popupwork1.style.display = 'block';
+                            });
+        
+                            workLink1.addEventListener('mouseout', () => {
+                                popupwork1.style.display = 'none';
+                            });
+                            // Text Hover End
+                        </script>
+                    </div>
+                    
+                    <div class="item" data-item="nk-lawfirm" data-targets="website, penpot, html5, 2023">NK Lawfirm</div>
+                    <div class="item work-link2" data-item="mama-rent-pump" data-targets="website, figma, html5, tailwindcss, 2023">Mama Rent Pump
+                        <div class="work-popup2 hidden absolute left-40 transition-transform rounded-lg z-50 w-75 h-50">
+                            <img class="rounded-2xl" src="./Porto Image/Mamarentpump.jpg" alt="Another Image">
+                        </div>
+                        <script>
+                            // Text Hover 1
+                            const workLink2 = document.querySelector('.work-link2');
+                            const popupwork2 = document.querySelector('.work-popup2');
+        
+                            workLink2.addEventListener('mouseover', () => {
+                                popupwork2.style.display = 'block';
+                            });
+        
+                            workLink2.addEventListener('mouseout', () => {
+                                popupwork2.style.display = 'none';
+                            });
+                            // Text Hover End
+                        </script>
+                    </div>
+                    <div class="item work-link3" data-item="savingg-app" data-targets="mobile-app, figma, 2023">Savingg App
+                        <div class="work-popup3 hidden absolute left-40 transition-transform rounded-lg z-50 w-75 h-50">
+                            <img class="rounded-2xl" src="./Porto Image/Savingg App.jpg" alt="Another Image">
+                        </div>
+                        <script>
+                            // Text Hover 1
+                            const workLink3 = document.querySelector('.work-link3');
+                            const popupwork3 = document.querySelector('.work-popup3');
+        
+                            workLink3.addEventListener('mouseover', () => {
+                                popupwork3.style.display = 'block';
+                            });
+        
+                            workLink3.addEventListener('mouseout', () => {
+                                popupwork3.style.display = 'none';
+                            });
+                            // Text Hover End
+                        </script>
+                    </div>
+                    <div class="item" data-item="jnj-data-recovery" data-targets="website, figma, html5, tailwindcss, 2023">JNJ Data Recovery</div>
+                    <div class="item work-link4" data-item="jnj-data-recovery" data-targets="website, figma, wordpress, tailwindcss, 2024">Global Artha Sukses
+                        <div class="work-popup4 hidden absolute left-40 transition-transform rounded-lg z-50 w-75 h-50">
+                            <img class="rounded-2xl" src="./Porto Image/GlobalArthaSukses.jpg" alt="Another Image">
+                        </div>
+                        <script>
+                            // Text Hover 1
+                            const workLink4 = document.querySelector('.work-link4');
+                            const popupwork4 = document.querySelector('.work-popup4');
+        
+                            workLink4.addEventListener('mouseover', () => {
+                                popupwork4.style.display = 'block';
+                            });
+        
+                            workLink4.addEventListener('mouseout', () => {
+                                popupwork4.style.display = 'none';
+                            });
+                            // Text Hover End
+                        </script>
+                    </div>
+                    <div class="item" data-item="algorithm-studio" data-targets="website, figma, framer, 2023">Algorithm Studio</div>
+                    <div class="item work-link5" data-item="effect-fx" data-targets="mobile-app, figma, 2024">Sleek FX
+                        <div class="work-popup5 hidden absolute left-40 transition-transform rounded-lg z-50 w-75 h-50">
+                            <img class="rounded-2xl" src="./Porto Image/SleekFX Porto.jpg" alt="Another Image">
+                        </div>
+                        <script>
+                            // Text Hover 1
+                            const workLink5 = document.querySelector('.work-link5');
+                            const popupwork5 = document.querySelector('.work-popup5');
+        
+                            workLink5.addEventListener('mouseover', () => {
+                                popupwork5.style.display = 'block';
+                            });
+        
+                            workLink5.addEventListener('mouseout', () => {
+                                popupwork5.style.display = 'none';
+                            });
+                            // Text Hover End
+                        </script>
+                    </div>
+                    <div class="item work-link6" data-item="baud-kids-app" data-targets="mobile-app, figma, 2024">BAUD Kids App
+                        <div class="work-popup6 hidden absolute left-40 transition-transform rounded-lg z-50 w-75 h-50">
+                            <img class="rounded-2xl" src="./Porto Image/BAUD.jpg" alt="Another Image">
+                        </div>
+                        <script>
+                            // Text Hover 1
+                            const workLink6 = document.querySelector('.work-link6');
+                            const popupwork6 = document.querySelector('.work-popup6');
+        
+                            workLink6.addEventListener('mouseover', () => {
+                                popupwork6.style.display = 'block';
+                            });
+        
+                            workLink6.addEventListener('mouseout', () => {
+                                popupwork6.style.display = 'none';
+                            });
+                            // Text Hover End
+                        </script>
+                    </div>
+                    <div class="item work-link7" data-item="solusi-sarana-persada" data-targets="website, figma, wordpress, tailwindcss, 2024">Solusi Sarana Persada (SSP)
+                        <div class="work-popup7 hidden absolute left-40 transition-transform rounded-lg z-50 w-75 h-50">
+                            <img class="rounded-2xl" src="./Porto Image/SolusiSaranaPersada.jpg" alt="Another Image">
+                        </div>
+                        <script>
+                            // Text Hover 1
+                            const workLink7 = document.querySelector('.work-link7');
+                            const popupwork7 = document.querySelector('.work-popup7');
+        
+                            workLink7.addEventListener('mouseover', () => {
+                                popupwork7.style.display = 'block';
+                            });
+        
+                            workLink7.addEventListener('mouseout', () => {
+                                popupwork7.style.display = 'none';
+                            });
+                            // Text Hover End
+                        </script>
+                    </div>
+                    <div class="item work-link8" data-item="pt-hlks" data-targets="website, figma, html5, tailwindcss, 2024">PT HLKS
+                        <div class="work-popup8 hidden absolute left-40 transition-transform rounded-lg z-50 w-75 h-50">
+                            <img class="rounded-2xl" src="./Porto Image/HLKS.jpg" alt="Another Image">
+                        </div>
+                        <script>
+                            // Text Hover 1
+                            const workLink8 = document.querySelector('.work-link8');
+                            const popupwork8 = document.querySelector('.work-popup8');
+        
+                            workLink8.addEventListener('mouseover', () => {
+                                popupwork8.style.display = 'block';
+                            });
+        
+                            workLink8.addEventListener('mouseout', () => {
+                                popupwork8.style.display = 'none';
+                            });
+                            // Text Hover End
+                        </script>
+                    </div>
+                    <div class="item work-link9" data-item="alexander-photo-studio" data-targets="website, figma, wordpress, tailwindcss, 2024">Alexander Photo Studio
+                        <div class="work-popup9 hidden absolute left-40 transition-transform rounded-lg z-50 w-75 h-50">
+                            <img class="rounded-2xl" src="./Porto Image/AlexanderPhotoStudio.jpg" alt="Another Image">
+                        </div>
+                        <script>
+                            // Text Hover 1
+                            const workLink9 = document.querySelector('.work-link9');
+                            const popupwork9 = document.querySelector('.work-popup9');
+        
+                            workLink9.addEventListener('mouseover', () => {
+                                popupwork9.style.display = 'block';
+                            });
+        
+                            workLink9.addEventListener('mouseout', () => {
+                                popupwork9.style.display = 'none';
+                            });
+                            // Text Hover End
+                        </script>
+                    </div>
+                    <div class="item" data-item="monitoring-pupuk" data-targets="webapp, figma, html5, 2023">Monitoring Pupuk Kalimantan Timur</div>
+                    <div class="item work-link10" data-item="mazda-batam" data-targets="website, figma, wordpress, tailwindcss, 2024">Mazda Batam
+                        <div class="work-popup10 hidden absolute left-40 transition-transform rounded-lg z-50 w-75 h-50">
+                            <img class="rounded-2xl" src="./Porto Image/Mazda Batam.jpg" alt="Another Image">
+                        </div>
+                        <script>
+                            // Text Hover 1
+                            const workLink10 = document.querySelector('.work-link10');
+                            const popupwork10 = document.querySelector('.work-popup10');
+        
+                            workLink10.addEventListener('mouseover', () => {
+                                popupwork10.style.display = 'block';
+                            });
+        
+                            workLink10.addEventListener('mouseout', () => {
+                                popupwork10.style.display = 'none';
+                            });
+                            // Text Hover End
+                        </script>
+                    </div>
+                    <div class="item work-link11" data-item="alexander-photo-bridal" data-targets="website, figma, wordpress, tailwindcss, 2024">Alexander Photo Bridal
+                        <div class="work-popup11 hidden absolute left-40 transition-transform rounded-lg z-50 w-75 h-50">
+                            <img class="rounded-2xl" src="./Porto Image/BridalPhotoStudio.jpg" alt="Another Image">
+                        </div>
+                        <script>
+                            // Text Hover 1
+                            const workLink11 = document.querySelector('.work-link11');
+                            const popupwork11 = document.querySelector('.work-popup11');
+        
+                            workLink11.addEventListener('mouseover', () => {
+                                popupwork11.style.display = 'block';
+                            });
+        
+                            workLink11.addEventListener('mouseout', () => {
+                                popupwork11.style.display = 'none';
+                            });
+                            // Text Hover End
+                        </script>
+                    </div>
+                    <div class="item work-link12" data-item="rumahdi-bsd" data-targets="website, figma, wordpress, tailwindcss, 2024">RumahdiBSD.com
+                        <div class="work-popup12 hidden absolute left-40 transition-transform rounded-lg z-50 w-75 h-50">
+                            <img class="rounded-2xl" src="./Porto Image/RumahDiBSD Porto.jpg" alt="Another Image">
+                        </div>
+                        <script>
+                            // Text Hover 1
+                            const workLink12 = document.querySelector('.work-link12');
+                            const popupwork12 = document.querySelector('.work-popup12');
+        
+                            workLink12.addEventListener('mouseover', () => {
+                                popupwork12.style.display = 'block';
+                            });
+        
+                            workLink12.addEventListener('mouseout', () => {
+                                popupwork12.style.display = 'none';
+                            });
+                            // Text Hover End
+                        </script>
+                    </div>
+                    <div class="item work-link13" data-item="space-marker-studio" data-targets="website, figma, framer, 2024">The Space Marker Studio
+                        <div class="work-popup13 hidden absolute left-40 transition-transform rounded-lg z-50 w-75 h-50">
+                            <img class="rounded-2xl" src="./Porto Image/TheSpaceMarkerStudio.jpg" alt="Another Image">
+                        </div>
+                        <script>
+                            // Text Hover 1
+                            const workLink13 = document.querySelector('.work-link13');
+                            const popupwork13 = document.querySelector('.work-popup13');
+        
+                            workLink13.addEventListener('mouseover', () => {
+                                popupwork13.style.display = 'block';
+                            });
+        
+                            workLink13.addEventListener('mouseout', () => {
+                                popupwork13.style.display = 'none';
+                            });
+                            // Text Hover End
+                        </script>
+                    </div>
+                    <div class="item work-link14" data-item="kawaii-photo-studio"data-targets="website, figma, wordpress, tailwindcss, 2024">Kawaii Photo Studio
+                        <div class="work-popup14 hidden absolute left-40 transition-transform rounded-lg z-50 w-75 h-50">
+                            <img class="rounded-2xl" src="./Porto Image/KawaiiPhotoStudio.jpg" alt="Another Image">
+                        </div>
+                        <script>
+                            // Text Hover 1
+                            const workLink14 = document.querySelector('.work-link14');
+                            const popupwork14 = document.querySelector('.work-popup14');
+        
+                            workLink14.addEventListener('mouseover', () => {
+                                popupwork14.style.display = 'block';
+                            });
+        
+                            workLink14.addEventListener('mouseout', () => {
+                                popupwork14.style.display = 'none';
+                            });
+                            // Text Hover End
+                        </script>
+                    </div>
+                    <div class="item work-link15" data-item="this-website" data-targets="website, Figma, wordpress, html5, tailwindcss, motiondev, lenis, htmx, 2025">This Website - joschagabriel.com</div>
+                </div>
+            </div>
+            <div class="group hidden lg:inline" data-group="technology">
+                <div class="text-2xl text-[#745545] font-semibold mb-2">Technology</div>
+                <div class="ml-4 text-lg text-[#C1A090] gap-2 [&>*]:hover:cursor-pointer">
+                    <div class="item" data-item="figma" data-targets="mobile-app, website, webapp, id-lite-net, nk-lawfirm, mama-rent-pump, savingg-app, jnj-data-recovery, algorithm-studio, effect-fx, baud-kids-app, solusi-sarana-persada, pt-hlks, alexander-photo-studio, mazda-batam, alexander-photo-bridal, rumahdi-bsd, space-marker-studio, kawaii-photo-studio, this-website, 2023, 2024, 2025">Figma</div>
+                    <div class="item" data-item="penpot" data-targets="website, nk-lawfirm, 2023">Penpot</div>
+                    <div class="item" data-item="html5" data-targets="website, webapp, nk-lawfirm, mama-rent-pump, jnj-data-recovery, pt-hlks, this-website, 2023, 2024, 2025">HTML5</div>
+                    <div class="item" data-item="wordpress" data-targets="website, id-lite-net, solusi-sarana-persada, alexander-photo-studio, mazda-batam, alexander-photo-bridal, rumahdi-bsd, kawaii-photo-studio, this-website, 2023, 2024, 2025">Wordpress</div>
+                    <div class="item" data-item="tailwindcss" data-targets="website, mama-rent-pump, jnj-data-recovery, pt-hlks, id-lite-net, solusi-sarana-persada, alexander-photo-studio, mazda-batam, alexander-photo-bridal, rumahdi-bsd, kawaii-photo-studio, this-website, 2023, 2024, 2025">TailwindCSS</div>
+                    <div class="item" data-item="motiondev" data-targets="this-website, website, 2025">Motion Dev</div>
+                    <div class="item" data-item="lenis" data-targets="this-website, website, 2025">Lenis</div>
+                    <div class="item" data-item="framer" data-targets="website, algorithm-studio, space-marker-studio, 2024">Framer</div>
+                    <div class="item" data-item="htmx" data-targets="this-website, website, 2025">Alpine JS</div>
+                </div>
+            </div>
+            <div class="hidden lg:inline group" data-group="years">
+                <div class="text-2xl text-[#745545] font-semibold mb-2">Years of Works</div>
+                <div class="ml-4 mb-72 text-lg text-[#C1A090] gap-2 [&>*]:hover:cursor-pointer">
+                    <div class="item" data-item="2023" data-targets="nk-lawfirm, mama-rent-pump, savingg-app, jnj-data-recovery, algorithm-studio, monitoring-pupuk, website, webapp, mobile-app, figma, penpot, html5, tailwindcss, framer">2023</div>
+                    <div class="item" data-item="2024" data-targets="id-lite-net, effect-fx, baud-kids-app, solusi-sarana-persada, pt-hlks, alexander-photo-bridal, alexander-photo-studio, rumahdi-bsd, space-marker-studio, kawaii-photo-studio, figma, html5, wordpress, tailwindcss, framer, website">2024</div>
+                    <div class="item" data-item="2025" data-targets="website, this-website, figma, html5, wordpress, tailwindcss, motiondev, lenis,htmx">2025</div>
+                </div>
+                <div class="absolute end-0 mb-20 px-40 hidden">
+                    <img class="w-54 h-60 bg-slate-200" src="{.url}" alt="">
+                </div>
+            </div>
+        </div>
+
+    
+    </div>
+
+    <div class="scroll-section-up h-screen bg-cover hidden lg:block" style="background-image:url(./image/companiesworkwithbg.svg)">
+        <div class="flex my-auto">
+            <div class="ml-60 mt-40">
+                <img data-tooltip="Test Tooltip" class="scroll-section-up cursor-grabbing h-32 blur-xl hover:blur-none transition" src="./image/fulltime_idh.svg" alt="" style="cursor:pointer;"
+                title="Indonesia Distribution Hub ~ January 2023 - April 2024">
+                <img class="pl-10 w-90" src="./image/fulltime text.svg" alt="">
+                <img class="scroll-section-up cursor-grabbing ml-48 w-40 blur-xl hover:blur-none transition" src="./image/fulltime_100e.svg" alt="" style="cursor:pointer;"
+                title="100E Ventures ~ April 2024 - Present">
+            </div>
+            <div class="mx-auto w-82 text-[#ECD4C7] font-semibold text-4xl text-center pl-34 pt-70">Companies I’ve worked with</div>
+            <div class="ml-14 mt-70 mr-10">
+                <img class="scroll-section-up cursor-grabbing h-10 blur-xl hover:blur-none transition" src="./image/freelance_dribble.svg" alt="">
+                <img class="pl-2 h-16" src="./image/freelance text.svg" alt="">
+                <img class="scroll-section-up cursor-grabbing ml-48 w-60 blur-xl hover:blur-none transition" src="./image/freelance_contra.svg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="p-0 lg:p-32 z-40 container3">
+        <!-- Cursor Second Section -->
+        <div class="cursor-source3 fixed">
+            <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g filter="url(#filter0_d_1022_55)">
+                <path d="M10.3133 27.9048C8.91221 20.2707 6.91999 9.36364 6.23893 5.45625C6.11719 4.75783 6.71729 4.28981 7.37462 4.5554L29.9389 13.6723C30.8562 14.0429 30.7359 15.378 29.7671 15.5787L17.2538 18.1705C16.9433 18.2348 16.6817 18.4425 16.5488 18.7304L12.2033 28.1391C11.7941 29.0249 10.4894 28.8645 10.3133 27.9048Z" fill="#ECD4C7"/>
+                <path d="M5.25378 5.62796C5.9358 9.54084 7.92901 20.4533 9.32972 28.0853C9.68417 30.0166 12.2977 30.3194 13.1111 28.5584L17.4566 19.1497L29.9699 16.5579C31.9074 16.1566 32.1481 13.4863 30.3135 12.7451L7.74923 3.62822C7.12227 3.3749 6.42219 3.44367 5.8954 3.85911C5.36444 4.27783 5.13559 4.94989 5.25378 5.62796Z" stroke="white" stroke-width="2"/>
+                </g>
+                <defs>
+                <filter id="filter0_d_1022_55" x="0.223633" y="0.480469" width="36.3413" height="36.2412" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                <feOffset dy="2"/>
+                <feGaussianBlur stdDeviation="2"/>
+                <feComposite in2="hardAlpha" operator="out"/>
+                <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.5 0"/>
+                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1022_55"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1022_55" result="shape"/>
+                </filter>
+                </defs>
+                </svg>                                                  
+        </div>
+        <!-- Cursor Second Section -->
+        <div class="p-14 lg:p-0 scroll-section-up lg:w-[650px] font-bold text-left text-[#745545] text-[56px] leading-14">And then, here the section to reach me.
+            Lets beat all the brief!</div>
+        <div class="px-14 lg:px-0 scroll-section-up text-left text-2xl text-[#858585] w-100 lg:w-[700px] mt-2 lg:mt-8 mb-10 lg:mb-0">If you finally reached this part, I believe we should talk. <br>
+            I’m here - ready to answer - ready to help - ready to work with. Always.</div>
+        <div class="scroll-section-up px-14 lg:px-0 mt-6 gap-5 flex cursor-pointer">
+            <a class="w-fit bg-[#745545] text-[#ECD4C7] px-3 py-2 gap-3 lg:gap-2 flex rounded-lg hover:brightness-110 cursor-pointer" href="mailto:joschagabriel@gmail.com?subject=Hello%20Joscha!" target="_blank">
+                <div class="my-auto">
+                    <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 16C1.45 16 0.979167 15.8042 0.5875 15.4125C0.195833 15.0208 0 14.55 0 14V2C0 1.45 0.195833 0.979167 0.5875 0.5875C0.979167 0.195833 1.45 0 2 0H18C18.55 0 19.0208 0.195833 19.4125 0.5875C19.8042 0.979167 20 1.45 20 2V14C20 14.55 19.8042 15.0208 19.4125 15.4125C19.0208 15.8042 18.55 16 18 16H2ZM10 9L2 4V14H18V4L10 9ZM10 7L18 2H2L10 7ZM2 4V2V14V4Z" fill="#ECD4C7"/>
+                        </svg>                        
+                </div>
+                <div class="text-xl text-[#ECD4C7]">Email me</div>
+            </a>
+            <div class="text-xl text-[#858585] my-auto py-3 lg:py-0">or</div>
+            <a class="flex gap-2 w-fit cursor-pointer hover:brightness-120" href="https://api.whatsapp.com/send?phone=6282161323251&text=Hello%20Joscha!" target="_blank">
+                <div class="my-auto">
+                    <svg width="33" height="34" viewBox="0 0 33 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.46629 12.1693C8.7346 11.0746 9.73907 9.77037 10.5096 9.52033C10.6128 9.48654 11.0187 9.47303 11.4178 9.48654C11.9117 9.50503 12.0679 9.51087 12.1789 9.58401C12.2302 9.61784 12.2719 9.66606 12.3328 9.73658C12.6217 10.0677 13.9633 13.2708 13.9633 13.6222C13.9633 13.9196 13.7775 14.2237 13.0276 15.1427C12.7868 15.4401 12.6561 15.6631 12.6561 15.7847C12.6561 16.1564 13.75 17.6363 14.7063 18.5621C15.0228 18.8662 15.5663 19.3122 15.9103 19.5555C16.6327 20.0691 18.3871 20.9476 18.676 20.9476C18.9031 20.9476 19.2402 20.63 19.9557 19.7244C20.6505 18.8392 20.6643 18.8257 21.0221 18.8797C21.3179 18.9203 24.5101 20.3664 24.8404 20.6164C24.9917 20.7246 25.0055 20.7854 24.9986 21.2652C24.9849 21.8801 24.8266 22.5559 24.5858 22.9546C24.2212 23.5696 23.086 24.3264 22.1779 24.5629C21.5931 24.7116 20.3341 24.6981 19.6392 24.5359C18.3114 24.2183 16.3025 23.3601 15.1466 22.6167C13.3648 21.4679 11.7411 19.8934 10.2413 17.8661C8.59013 15.636 8.0535 13.8993 8.46629 12.1693Z" fill="#AD7561"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M6.65225 3.86789C9.23287 1.93751 12.1102 0.879585 15.5533 0.584189C16.1881 0.529232 18.1339 0.625407 18.9895 0.749061C25.9793 1.77264 31.5959 7.23403 32.762 14.1449C33.3347 17.5454 32.8724 20.8909 31.3889 24.0029C30.416 26.0638 28.6979 28.2346 26.9177 29.6704C25.0892 31.1336 22.8053 32.2602 20.5214 32.8304C16.8988 33.7304 12.8623 33.3319 9.52957 31.745L8.68087 31.3397L4.35454 32.4732C1.97402 33.0983 0.014408 33.593 0.000607866 33.5792C-0.0200923 33.5655 0.490511 31.6557 1.13222 29.3406L2.29142 25.1227L1.95332 24.4975C1.09772 22.8694 0.504311 20.9802 0.228309 18.9537C0.0972085 17.9919 0.111009 15.67 0.25591 14.6945C0.718213 11.6787 1.92572 8.90336 3.78873 6.62263C4.45804 5.80514 5.83805 4.47242 6.65225 3.86789ZM26.1518 7.37142C24.0128 5.24869 21.3908 3.93659 18.4789 3.53815C16.3744 3.24962 14.5183 3.40075 12.5242 4.01902C7.81146 5.48226 4.20964 9.44606 3.23673 14.248C2.54673 17.6691 3.15393 21.0558 5.01694 24.0922L5.36884 24.6624L4.69954 27.108C4.32694 28.4544 4.04404 29.5673 4.05784 29.5811C4.07164 29.5948 5.21704 29.3132 6.60395 28.9559L9.11557 28.2964L9.72968 28.6468C11.1718 29.478 12.7243 30.0276 14.4838 30.3367C15.4291 30.4947 17.6578 30.4947 18.6238 30.3367C21.9842 29.7597 24.8546 28.1384 26.9936 25.5829C28.4081 23.8998 29.4293 21.7909 29.8709 19.6544C30.7955 15.1548 29.4293 10.6414 26.1518 7.37142Z" fill="#AD7561"/>
+                        </svg>                        
+                </div>
+                <div class="text-xl text-[#AD7561] my-auto font-semibold">Hit me via Whatsapp</div>
+            </a>
+        </div>
+
+        <div class="flex w-full mt-20 justify-end">
+            <div class="justify-end bg-cover h-[400px] w-100vw lg:w-[566px]" style="background-image:url(./image/bg_mandatoryhuman.svg)">
+                <div class="ml-12 px-4 my-auto w-[280px]">
+                    <div class="mt-30 text-[#ECD4C7] text-sm font-normal">Mandatory section to proof that I’m a human.</div>
+                    <hr class="mt-2 border-0.5 border-[#ECD4C7]" />
+                    <div class="mt-2 text-4xl font-bold text-[#745545] leading-9">Love to play games too. 🕹</div>
+                    <div class="mt-3 text-[#ECD4C7] text-[12.5px] font-normal">Find me on <span class="font-bold">eFootball 2024</span>, <span class="font-bold">Mobile Legend</span> and <span class="font-bold">F1 Clash</span>. If you like to talk informally while gaming... hmm it sounds great, could arrange chit-chat through <a class="font-bold text-lg text-[#3269A2] hover:brightness-110 cursor-pointer" href="https://discordapp.com/users/500384528762929201" target="_blank">discord...</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-section-up m-14 lg:mx-0 flex w-fit mt-20 justify-start border-2 border-[#745545] rounded-xl">
+            <div class="p-2 gap-2 flex">
+                <div class="w-20 my-auto">
+                    <img class="rounded-sm" src="./image/pantone_img.jpg" alt="">
+                </div>
+                <div class="text-[#AD7561] my-auto h-fit">
+                    <div class="font-bold text-lg">Honorable Mention.</div>
+                    <div class="w-48 text-baseline">This website color scheme are inspired from Mocha Mousse - Pantone® color of the year 2025.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="flex justify-between px-4 lg:px-24 my-6 text-[#858585] h-fit">
+        <div class="my-auto">
+            <img class="w-10" src="./image/footer icon JG.png" alt="">
+        </div>
+        <div class="my-auto">2025 © Joscha Gabriel</div>
+        <div class="my-auto h-fit hidden lg:inline">
+            <div class="flex" x-data="{ zone: [] }"
+            x-init="fetch('https://timeapi.io/api/time/current/zone?timeZone=Europe%2FLondon')
+                    .then(response => response.json())
+                    .then(data => zone = data)"><span x-text="zone.hour"></span>:<span x-text="zone.minute"></span>:<span class="mr-1" x-text="zone.seconds"></span>UTC</div>
+            <div class="flex" x-data="{ zone: [] }"
+            x-init="fetch('https://timeapi.io/api/time/current/zone?timeZone=Etc%2FGMT-7')
+                    .then(response => response.json())
+                    .then(data => zone = data)"><span x-text="zone.hour"></span>:<span x-text="zone.minute"></span>:<span class="mr-1"  x-text="zone.seconds"></span>UTC+7</div>
+            <div class="flex" x-data="{ zone: [] }"
+            x-init="fetch('https://timeapi.io/api/time/current/zone?timeZone=Asia%2FTokyo')
+                    .then(response => response.json())
+                    .then(data => zone = data)"><span x-text="zone.hour"></span>:<span x-text="zone.minute"></span>:<span class="mr-1"  x-text="zone.seconds"></span>UTC+9</div>
+        </div>
+        <div class="my-auto flex hidden lg:inline-flex">
+            <div>🚩 Based in Jakarta, Indonesia</div>
+            <div class="animate-ping">|</div>
+        </div>
+        <a class="font-bold text-[#745545] flex gap-2 hover:brightness-110 cursor-pointer" href="#">
+            <div class="my-auto">Back to Top</div>
+            <img class="mt-4 animate-bounce h-12 my-auto" src="./image/arrow_backtotop.svg" alt="">
+        </a>
+    </div>
+    <!-- Footer End -->
+
+
+    <script type="module">
+        const header = document.getElementById('myHeader');
+        const body = document.body;
+        let lastScrollTop = 0;
+      
+        window.addEventListener('scroll', () => {
+          let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      
+          if (scrollTop > lastScrollTop) { // Scrolling down
+            header.classList.remove('hidden');
+            body.classList.add('body-padding'); // Add padding when header is visible
+          } else { // Scrolling up
+            header.classList.add('hidden');
+            body.classList.remove('body-padding'); // Remove padding when header is hidden
+          }
+          lastScrollTop = scrollTop;
+        });
+
+        // Hover Master
+        const serviceItems = document.querySelectorAll('[data-targets]'); // Select the triggering items
+        const allItems = document.querySelectorAll('[data-item]'); // Select all target items
+
+        serviceItems.forEach(item => {
+        const targets = item.dataset.targets.split(',').map(target => target.trim()); // Get target IDs
+        
+        item.addEventListener('mouseenter', () => {
+        item.style.fontWeight = '600';
+        item.style.color = '#745545';
+
+        allItems.forEach(targetItem => {
+          if (targets.includes(targetItem.dataset.item)) {
+            targetItem.style.fontWeight = 'semibold';
+            targetItem.style.color = "#745545";
+            targetItem.style.textDecoration = 'underline';
+            }
+            });
+        });
+
+        item.addEventListener('mouseout', () => {
+            item.style.fontWeight = 'normal';
+            item.style.color = '#C1A090';
+
+            allItems.forEach(targetItem => {
+            if (targets.includes(targetItem.dataset.item)) {
+                targetItem.style.fontWeight = 'normal';
+                targetItem.style.color = "#C1A090";
+                targetItem.style.textDecoration = 'none';
+            }
+            });
+        });
+        });
+        // Hover Master End
+
+        // Text Hover 1
+        const textLink1 = document.querySelector('.text-link1');
+        const popuptext1 = document.querySelector('.image-popup1');
+
+        textLink1.addEventListener('mouseover', () => {
+        popuptext1.style.display = 'block';
+        });
+
+        textLink1.addEventListener('mouseout', () => {
+        popuptext1.style.display = 'none';
+        });
+        // Text Hover End
+
+        // Text Hover 2
+        const textLink2 = document.querySelector('.text-link2');
+        const popuptext2 = document.querySelector('.image-popup2');
+
+        textLink2.addEventListener('mouseover', () => {
+        popuptext2.style.display = 'block';
+        });
+
+        textLink2.addEventListener('mouseout', () => {
+        popuptext2.style.display = 'none';
+        });
+        // Text Hover End
+
+        // Text Hover 3
+        const textLink3 = document.querySelector('.text-link3');
+        const popuptext3 = document.querySelector('.image-popup3');
+
+        textLink3.addEventListener('mouseover', () => {
+        popuptext3.style.display = 'block';
+        });
+
+        textLink3.addEventListener('mouseout', () => {
+        popuptext3.style.display = 'none';
+        });
+        // Text Hover End
+
+        // Text Hover 4
+        const textLink4 = document.querySelector('.text-link4');
+        const popuptext4 = document.querySelector('.image-popup4');
+
+        textLink4.addEventListener('mouseover', () => {
+        popuptext4.style.display = 'block';
+        });
+
+        textLink4.addEventListener('mouseout', () => {
+        popuptext4.style.display = 'none';
+        });
+        // Text Hover End
+
+        // Main Text Hero Anima
+        var elements = document.querySelectorAll('.main-text-logo');
+        anime({
+            delay: 10,
+            opacity: 100,
+            targets: elements,
+            translateY: -20,
+            duration: 3000,
+            easing: 'easeInOutQuad',
+        });
+        
+        var elements = document.querySelectorAll('.main-text-hi');
+        anime({
+            delay: 200,
+            opacity: 100,
+            targets: elements,
+            translateY: -20,
+            duration: 3000,
+            easing: 'easeInOutQuad',
+        });
+
+        var elements = document.querySelectorAll('.main-text-in');
+        anime({
+            delay: 400,
+            opacity: 100,
+            targets: elements,
+            translateY: -20,
+            duration: 3000,
+            easing: 'easeInOutQuad',
+        });
+
+        var elements = document.querySelectorAll('.main-text-ui');
+        anime({
+            delay: 600,
+            opacity: 100,
+            targets: elements,
+            translateY: -20,
+            duration: 3000,
+            easing: 'easeInOutQuad',
+        });
+
+        var elements = document.querySelectorAll('.main-text-link');
+        anime({
+            delay: 800,
+            opacity: 100,
+            targets: elements,
+            translateY: -40,
+            duration: 3000,
+            easing: 'easeInOutQuad',
+        });
+        // Main Text Hero Anima End
+
+        // Glitch
+        PowerGlitch.glitch('.glitch', 
+                {
+        "playMode": "hover",
+        "optimizeSeo": true,
+        "createContainers": true,
+        "hideOverflow": false,
+        "timing": {
+            "duration": 2000
+        },
+        "glitchTimeSpan": {
+            "start": 0.1,
+            "end": 0.4
+        },
+        "shake": {
+            "velocity": 15,
+            "amplitudeX": 0.2,
+            "amplitudeY": 0.2
+        },
+        "slice": {
+            "count": 6,
+            "velocity": 15,
+            "minHeight": 0.02,
+            "maxHeight": 0.15,
+            "hueRotate": 0,
+        },
+        "pulse": false
+        })
+
+        // Popup
+        const popup = document.querySelector('.popup');
+        const closeButton = document.getElementById('closePopup');
+        let hasShown = false; 
+
+        closeButton.addEventListener('click', () => {
+            popup.style.display = 'none'; 
+            hasShown = true; // Mark as shown
+        });
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY === 0 && hasShown) { 
+            popup.style.display = 'block'; 
+            hasShown = false; // Reset for next appearance
+            }
+        });
+        // Pop Up End
+
+        // Scroll Section
+        const { animate, inView } = window.Motion
+
+        inView(".menu1", (element) => {
+            animate(element, { opacity: 1,  x: 0,  y: 0 })
+
+            return () => animate(element, { opacity: 0, y: -100, duration: 180 })
+            })
+
+        inView(".menu2", (element) => {
+            animate(element, { opacity: 1,  x: 0,  y: 0 })
+
+            return () => animate(element, { opacity: 0, y: -150, duration: 190 })
+            })
+
+        inView(".menu3", (element) => {
+            animate(element, { opacity: 1,  x: 0,  y: 0 })
+
+            return () => animate(element, { opacity: 0, y: -200, duration: 200 })
+            })
+        
+        inView(".menu4", (element) => {
+            animate(element, { opacity: 1,  x: 0,  y: 0 })
+
+            return () => animate(element, { opacity: 0, y: -250, duration: 210 })
+            })
+
+            inView(".scroll-section-right", (element) => {
+            animate(
+                element,
+                { opacity: 1, x: [-100, 0] },
+                {
+                    duration: 0.9,
+                    easing: [0.17, 0.55, 0.55, 1],
+                }
+            )
+
+            return () => animate(element, { opacity: 0, x: -100 })
+        })
+
+        inView(".scroll-section-up", (element) => {
+            animate(
+                element,
+                { opacity: 1, y: [100, 0], },
+                {
+                    duration: 0.9,
+                    easing: [0.10, 0.55, 0.55, 1],
+                }
+            )
+
+            return () => animate(element, { opacity: 0, y: 100 })
+        })
+
+        inView(".scroll-section-down", (element) => {
+            animate(
+                element,
+                { opacity: 1, y: [0, 0], },
+                {
+                    duration: 1.1,
+                    easing: [0.10, 0.55, 0.55, 1],
+                }
+            )
+
+            return () => animate(element, { opacity: 0, y: 100 })
+        })
+
+        inView(".scroll-section-left", (element) => {
+            animate(
+                element,
+                { opacity: 1, x: [0, -10], },
+                {
+                    duration: 0.3,
+                    easing: [0.10, 0.55, 0.55, 1],
+                }
+            )
+
+            return () => animate(element, { opacity: 0, y: 0 })
+        })
+        // Scroll Section
+
+        // Initialize Lenis
+        const lenis = new Lenis({
+        autoRaf: true,
+        });
+
+        // Listen for the scroll event and log the event data
+        lenis.on('scroll', (e) => {
+        console.log(e);
+        });
+        
+        // Custom Cursor
+        const targetDiv = document.querySelector('.container');
+        const cursorSource = document.querySelector('.cursor-source');
+
+        targetDiv.addEventListener('mouseenter', () => {
+        cursorSource.style.display = 'block';
+        document.body.style.cursor = 'none'; 
+        });
+
+        targetDiv.addEventListener('mouseleave', () => {
+        cursorSource.style.display = 'none';
+        document.body.style.cursor = 'default'; 
+        });
+
+        document.addEventListener('mousemove', (event) => {
+        cursorSource.style.left = (event.clientX - 25) + 'px'; 
+        cursorSource.style.top = (event.clientY - 25) + 'px'; 
+        });
+
+        // Optional: Move cursor source with mouse
+        document.addEventListener('mousemove', (event) => {
+        cursorSource.style.left = (event.clientX - 1) + 'px';
+        cursorSource.style.top = (event.clientY - 1) + 'px';
+        });
+        // Custom Cursor End
+
+        document.addEventListener('mousemove', (event) => {
+            cursorSource2.style.left = (event.clientX - 25) + 'px'; // Adjust offset as needed
+            cursorSource2.style.top = (event.clientY - 25) + 'px'; // Adjust offset as needed
+        });
+
+        // Custom Cursor 3rd
+        const targetDiv3 = document.querySelector('.container3');
+        const cursorSource3 = document.querySelector('.cursor-source3');
+
+        targetDiv3.addEventListener('mouseenter', () => {
+        cursorSource3.style.display = 'block';
+        document.body.style.cursor = 'none'; 
+        });
+
+        targetDiv3.addEventListener('mouseleave', () => {
+        cursorSource3.style.display = 'none';
+        document.body.style.cursor = 'default'; 
+        });
+
+        document.addEventListener('mousemove', (event) => {
+        cursorSource3.style.left = (event.clientX - 25) + 'px'; 
+        cursorSource3.style.top = (event.clientY - 25) + 'px'; 
+        });
+
+        // Optional: Move cursor source with mouse
+        document.addEventListener('mousemove', (event) => {
+        cursorSource3.style.left = (event.clientX - 1) + 'px';
+        cursorSource3.style.top = (event.clientY - 1) + 'px';
+        });
+        // Custom Cursor 3rd End
+
+        // Hover Image Text
+        const hoverTexts = document.querySelectorAll('.hover-text');
+
+        hoverTexts.forEach(text => {
+        const imageId = text.dataset.target;
+        const image = document.getElementById(imageId);
+
+        text.addEventListener('mouseover', (event) => {
+            image.src = text.dataset.image;
+            image.style.display = 'block';
+            positionImage(event, image);
+        });
+
+        text.addEventListener('mouseout', () => {
+            image.style.display = 'none';
+        });
+
+        text.addEventListener('mousemove', (event) => {
+            if (image.style.display === 'block') {
+            positionImage(event, image);
+            }
+        });
+        });
+
+        function positionImage(event, image) {
+        const x = event.clientX + 10;
+        const y = event.clientY + 10;
+        image.style.left = x + 'px';
+        image.style.top = y + 'px';
+        }
+        // Hover Image Text End
+    </script>
+</body>
+
+</html>
