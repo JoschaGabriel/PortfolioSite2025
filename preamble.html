@@ -19,10 +19,18 @@
                     <img class="w-14" src="./image/hero icon JG.png" alt="">
                 </div>
                 <div class="my-auto h-fit lg:flex gap-8 lg:gap-14 text-md text-[#AD7561] font-semibold hidden">
-                    <div class="hidden lg:inline">Home</div>
-                    <div>Project</div>
-                    <div>Preamble</div>
-                    <div>Contact</div>
+                    <a href="./index.html">
+                        <div class="hidden lg:inline">Home</div>
+                    </a>
+                    <a href="https://project.joschagabriel.com/">
+                        <div>Project</div>
+                    </a>
+                    <a href="./preamble.html">
+                        <div>Preamble</div>
+                    </a>
+                    <a href="./contact.html">
+                        <div>Contact</div>
+                    </a>
                 </div>
                 <div class="menu-button w-8 my-auto inline lg:hidden">
                     <img src="./image/menu button.svg" alt="">
@@ -97,10 +105,49 @@
             </div>
         </div>
 
-        <div class="z-10 mt-10 overflow-hidden">
+        <div id="myDiv" class="disable-interactions z-10 mt-10 overflow-hidden">
             <img class="hidden lg:inline-block w-full" src="./image/preamble/desktop roadmap.svg" alt="">
-            <img class="inline-block lg:hidden w-full" src="./image/preamble/mobile roadmap.svg" alt="">
+            <img id="myDiv" class="disable-interactions inline-block lg:hidden w-full" src="./image/preamble/mobile roadmap.svg" alt="">
         </div>
+
+        <script>
+            const myDiv = document.getElementById('myDiv');
+
+            if (myDiv) {
+            myDiv.addEventListener('click', function(event) {
+                event.preventDefault();
+                event.stopPropagation();
+            });
+
+            myDiv.addEventListener('contextmenu', function(event) {
+                event.preventDefault();
+                event.stopPropagation();
+            });
+
+            myDiv.addEventListener('touchstart', function(event) {
+                event.preventDefault();
+                event.stopPropagation();
+            });
+
+            myDiv.addEventListener('touchend', function(event) {
+                event.preventDefault();
+                event.stopPropagation();
+            });
+
+            myDiv.addEventListener('touchmove', function(event) {
+                event.preventDefault();
+                event.stopPropagation();
+            });
+
+            myDiv.addEventListener('selectstart', function(event) {
+                event.preventDefault();
+            });
+
+            myDiv.addEventListener('dragstart', function(event) {
+                event.preventDefault();
+            });
+        }
+        </script>
 
         <div class="z-10 mt-24 overflow-hidden">
             <hr class="border-0.5 border-[#643B27] w-full" />
