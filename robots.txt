@@ -3,4 +3,4 @@ Disallow: /cgi-bin/
 Disallow: /tmp/
 Disallow: /private/
 
-Sitemap: https://www.yourdomain.com/sitemap.xml
+Sitemap: https://www.joschagabriel.com/sitemap.xml
