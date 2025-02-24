@@ -27,9 +27,9 @@
     }
     </style>
 
-<body class="bg-[#171717]">
+<body class="bg-[#171717] w-full m-0">
     <!-- Header -->
-    <div id="myHeader" class="scroll-section-down justify-between bg-[#17171795] backdrop-blur-md drop-shadow-md  py-2 text-[#858585] h-fit border-b-1 border-[#643B27] fixed top-0 right-0 left-0 z-50 hidden transition ease-in">
+    <div id="myHeader" class="scroll-section-down justify-between bg-[#17171795] backdrop-blur-md drop-shadow-md py-2 text-[#858585] h-fit border-b-1 border-[#643B27] fixed pt-10 lg:pt-2 lg:top-0 right-0 left-0 z-50 hidden transition ease-in">
         <div class="w-full px-4 lg:px-24">
             <div class="flex justify-between">
                 <div class="my-auto">
@@ -49,19 +49,27 @@
                 </div>
             </div>
         </div>
-        <div id="MobileMenu" class="mobile-menu w-full mt-2 hidden">
-            <div class="menu1 px-6 py-4 bg-[#643B27] active:invert text-[#ECD4C7] font-regular text-2xl">
-                Home
-            </div>
-            <div class="menu2 px-6 py-4 bg-[#745545] active:invert text-[#ECD4C7] font-regular text-2xl">
-                Project
-            </div>
-            <div class="menu3 px-6 py-4 bg-[#465667] active:invert text-[#ECD4C7] font-regular text-2xl">
-                Preamble
-            </div>
-            <div class="menu4 px-6 py-4 bg-[#1C2E41] active:invert text-[#ECD4C7] font-regular text-2xl">
-                Contact
-            </div>
+        <div id="MobileMenu" class="mobile-menu w-full hidden pt-4">
+            <a href="./index.html">
+                <div id="myDiv" onclick="location.href='your-link.html';" class="menu1 px-6 py-4 bg-[#643B27] active:invert text-[#ECD4C7] font-regular text-2xl">
+                    Home
+                </div>
+            </a>
+            <a href="https://project.joschagabriel.com/">
+                <div id="myDiv" onclick="location.href='your-link.html';" class="menu2 px-6 py-4 bg-[#745545] active:invert text-[#ECD4C7] font-regular text-2xl">
+                    Project
+                </div>
+            </a>
+            <a href="./preamble.html">
+                <div id="myDiv" onclick="location.href='your-link.html';" class="menu3 px-6 py-4 bg-[#465667] active:invert text-[#ECD4C7] font-regular text-2xl">
+                    Preamble
+                </div>
+            </a>
+            <a href="./contact.html">
+                <div id="myDiv" onclick="location.href='your-link.html';" class="menu4 px-6 py-4 bg-[#1C2E41] active:invert text-[#ECD4C7] font-regular text-2xl">
+                    Contact
+                </div>
+            </a>
         </div>
 
         <script>
@@ -85,13 +93,13 @@
     <!-- Header End -->
 
     <!-- pop up tl dr -->
-    <div id="pop-up-home" class="popup scroll-section-left lg:w-75 h-25 z-50 right-20 lg:right-10 absolute fixed mt-22 lg:mt-24">
+    <div id="pop-up-home" class="popup scroll-section-left lg:w-75 h-25 z-50 right-10 lg:right-10 absolute fixed mt-22 lg:mt-24">
             <button id="closePopup" class="bg-[#F1F1EF] w-8 h-8 mx-auto text-center text-[#404040] text-md font-bold py-0.5 border-1 border-[#C0C0C0] rounded-full absolute -top-4 -right-4 cursor-pointer">X</button>
             <div class="w-75 text-black bg-[#E2DFDB] rounded-xl flex shadow-lg shadow-[#ffffff50]">
             <div class="w-13 text-3xl mx-auto px-3 my-auto">
                 💡
             </div>
-            <div class="w-62 text-sm lg:text-md p-2 bg-[#F1F1EF] border border-[#DBE1E2] rounded-xl shadow-lg leading-5 text-[#404040]">Are you <span class="font-bold">HR</span> or my <span class="font-bold">Future Users/Lead?</span> This website would be too long to read, <span class="text-[#9E7A68] underline font-semibold"><a href="#">click here for simple version website ➙</a></span></div>
+            <div class="w-62 text-sm lg:text-md p-2 bg-[#F1F1EF] border border-[#DBE1E2] rounded-xl shadow-lg leading-5 text-[#404040]">Are you <span class="font-bold">HR</span> or my <span class="font-bold">Future Users/Lead?</span> This website would be too long to read, <span class="text-[#9E7A68] underline font-semibold"><a href="./lite.html">click here for simple version website ➙</a></span></div>
         </div>
     </div>
     <!-- pop up tl dr -->
@@ -129,14 +137,14 @@
         <div class="mx-32">
             <img src="./image/hero text Connoisseur.png" alt="" class="glitch w-90 pt-8 z-4">
             <div class="text-5xl font-bold text-[#745545]">of Functional  Design</div>
-            <div class="w-84 lg:w-[550px] text-3xl lg:text-5xl font-bold text-[#745545] mt-7">An admirer of Evocative Sentences.</div>
-            <div class="font-light text-xl lg:text-3xl w-84 lg:w-[750px] text-zinc-500 mt-7 mb-28">Prefer to be a passionate designer, combining aesthetics and problem-solving for intended to be a great user experience.</div>
+            <div class="w-64 lg:w-[550px] text-2xl lg:text-5xl font-bold text-[#745545] mt-7">An admirer of Evocative Sentences.</div>
+            <div class="font-light text-xl lg:text-3xl w-60 lg:w-84 lg:w-[750px] text-zinc-500 mt-7 mb-28">Prefer to be a passionate designer, combining aesthetics and problem-solving for intended to be a great user experience.</div>
         </div>
     </div>
 
     <div id="" class="bg-[#271D1D] p-18 lg:p-24 z-40 cursor-pointer container-text">
         <div class="scroll-section-up p-4 mx-auto w-fit text-center bg-[#2A231F] text-[56px] rounded-2xl">💻🎨📱</div>
-        <div class="scroll-section-up mx-auto text-center text-xl lg:text-2xl text-[#858585] w-86 lg:w-[700px] mt-12 hover-text">Creative experience in <span class="text-link1 underline text-[#9E7A68] hover:brightness-120 hover:cursor-grabbing hover:font-semibold">B2B e-commerce</span>, <span class="text-link2 hover:cursor-grabbing underline text-[#9E7A68] hover:brightness-120 hover:cursor-pointer hover:font-semibold">hospitality</span>, <span class="text-link3 hover-text underline text-[#9E7A68] hover:brightness-120 hover:cursor-grabbing hover:font-semibold">Cryptocurrency</span>, and <span class="text-link4 hover-text underline text-[#9E7A68] hover:brightness-120 hover:cursor-grabbing hover:font-semibold">industrial sector</span>, provide with vast breadth of inspiration to draw form.</div>
+        <div class="scroll-section-up mx-auto text-center text-xl lg:text-2xl text-[#858585] w-64 lg:w-[700px] mt-12 hover-text">Creative experience in <span class="text-link1 underline text-[#9E7A68] hover:brightness-120 hover:cursor-grabbing hover:font-semibold">B2B e-commerce</span>, <span class="text-link2 hover:cursor-grabbing underline text-[#9E7A68] hover:brightness-120 hover:cursor-pointer hover:font-semibold">hospitality</span>, <span class="text-link3 hover-text underline text-[#9E7A68] hover:brightness-120 hover:cursor-grabbing hover:font-semibold">Cryptocurrency</span>, and <span class="text-link4 hover-text underline text-[#9E7A68] hover:brightness-120 hover:cursor-grabbing hover:font-semibold">industrial sector</span>, provide with vast breadth of inspiration to draw form.</div>
         <div class="image-popup1 object-cover hidden absolute left-4 transition-transform rounded-xl z-50 w-75 h-50">
             <img class="rounded-lg" src="./Porto Image/_IDH.jpg" alt="Another Image">
         </div>
@@ -149,7 +157,7 @@
         <div class="image-popup4 object-cover hidden absolute left-4 transition-transform rounded-xl z-50 w-75 h-50">
             <img class="rounded-lg" src="./Porto Image/_Otsu.jpg" alt="Another Image">
         </div>
-        <div class="scroll-section-up mx-auto text-center text-xl lg:text-2xl text-[#858585] w-86 lg:w-[700px] mt-12">A believer that if you’re willing to embrace the unconventional and some compelling content, on the way to making something great. All that’s left is to find anyone who can pull the colorful pallette out of the vase.</div>
+        <div class="scroll-section-up mx-auto text-center text-xl lg:text-2xl text-[#858585] w-64 lg:w-[700px] mt-12">A believer that if you’re willing to embrace the unconventional and some compelling content, on the way to making something great. All that’s left is to find anyone who can pull the colorful pallette out of the vase.</div>
     </div>
 
     <div id="ScrollMore" class="">
@@ -218,13 +226,13 @@
     </div>
 
     <div class="bg-[#F8F3ED] p-12 lg:p-40 z-40">
-        <div class="justify-between flex my-auto">
-            <div class="text-3xl font-semibold text-[#AD7561] flex gap-2 lg:gap-4 my-auto">
+        <div class="justify-between inline-block lg:flex my-auto">
+            <div class="text-3xl mb-5 lg:mb-0 font-semibold text-[#AD7561] flex gap-2 lg:gap-4 my-auto">
                 <div class="my-auto">Other Project List</div>
                 <img class="my-auto animate-spin" src="./image/project list asterix.svg">
             </img>
             </div>
-            <a class="w-fit hover:brightness-120 bg-[#745545] py-1 px-3 rounded-lg text-white my-auto" href="#">View All ➟</a>
+            <a class="w-fit hover:brightness-120 bg-[#745545] py-1 px-3 rounded-lg text-white my-auto" href="https://project.joschagabriel.com/">View All ➟</a>
         </div>
 
         <div class="mx-auto w-full grid grid-cols-1 lg:grid-cols-4 gap-4 mb-6 mt-10">
@@ -587,7 +595,7 @@
         <!-- Cursor Second Section -->
         <div class="p-14 lg:p-0 scroll-section-up lg:w-[650px] font-bold text-left text-[#745545] text-[56px] leading-14">And then, here the section to reach me.
             Lets beat all the brief!</div>
-        <div class="px-14 lg:px-0 scroll-section-up text-left text-2xl text-[#858585] w-100 lg:w-[700px] mt-2 lg:mt-8 mb-10 lg:mb-0">If you finally reached this part, I believe we should talk. <br>
+        <div class="px-14 lg:px-0 scroll-section-up text-left text-2xl text-[#858585] w-88 lg:w-[700px] mt-2 lg:mt-8 mb-10 lg:mb-0">If you finally reached this part, I believe we should talk. <br>
             I’m here - ready to answer - ready to help - ready to work with. Always.</div>
         <div class="scroll-section-up px-14 lg:px-0 mt-6 gap-5 flex cursor-pointer">
             <a class="w-fit bg-[#745545] text-[#ECD4C7] px-3 py-2 gap-3 lg:gap-2 flex rounded-lg hover:brightness-110 cursor-pointer" href="mailto:joschagabriel@gmail.com?subject=Hello%20Joscha!" target="_blank">
