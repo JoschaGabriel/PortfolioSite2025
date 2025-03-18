@@ -6,7 +6,9 @@
     <title>Lite - Joscha Gabriel Portfolio Website</title>
     <link rel="icon" type="image/x-icon" href="./image/favicon JG.svg">
     <link rel="stylesheet" href="styleindex.css">
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link href="./output.css" rel="stylesheet">
+    <link href="https://vjs.zencdn.net/8.16.1/video-js.css" rel="stylesheet" />
+    <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/motion@latest/dist/motion.js"></script>
 
 </head>
@@ -56,7 +58,7 @@
 
                 <div class="justify-between w-full inline-block lg:flex gap-24 mt-8">
                     <div class="w-12/12 lg:w-8/12 text-[#858585]">
-                        Hello 👋 from <span class="text-[#858585] font-bold">Joscha</span>, Jakarta based UI/UX Designer (often to do some UI engineer too), currently work at 100E Ventures <span class="text-[#9E7A68] underline font-bold">100eventures.com</span>
+                        Hello 👋 from <span class="text-[#858585] font-bold">Joscha</span>, Jakarta based UI/UX Designer (often to do some UI engineer too), currently work at 100E Ventures <span class="text-[#9E7A68] underline font-bold"><a target="_blank" href="https://www.100eventures.com">100eventures.com</a></span>
                         <br />
                         <br />
                         When not working, I enjoy to roaming around jakarta (cafe-hoping) and do some high adrenaline activity(read: Gaming).
@@ -65,11 +67,13 @@
                         Started as designer (interior) in office industry in 2019 (CDA International) and swift as UI designer in 2023 (Indonesia Distribution Hub - IDH), I never stopped to explore mediums & interaction paradigms between human and design concept. 
                         <br />
                         <br />
-                        More experience detail could check on <span class="text-[#9E7A68] font-bold">Resume</span><span class="ml-1 text-[#ECD4C7] font-bold">➚</span> and more narrative about my view on design could read at <span class="text-[#9E7A68] font-bold">Preamble Page</span><span class="ml-1 text-[#ECD4C7] font-bold">➙</span>
+                        More experience detail could check on <span class="text-[#9E7A68] font-bold"><a target="_blank" href="https://drive.google.com/file/d/1-VPGdQA1bxyesIAk3Hl1LSK56xC9TUpj/view?usp=sharing">Resume</a></span><span class="ml-1 text-[#ECD4C7] font-bold">➚</span> and more narrative about my view on design could read at <span class="text-[#9E7A68] font-bold"><a target="_blank" href="./preamble.html">Preamble Page</a></span><span class="ml-1 text-[#ECD4C7] font-bold"><a target="_blank" href="./preamble.html">➙</a></span>
                     </div>
                     <div id="scroll2" class="">
-                        <div>
-                            <img src="" alt="" class="mt-10 lg:mt-0 w-80 lg:w-90 h-72 rounded-xl z-4 bg-slate-400">
+                        <div class="mt-10 lg:mt-0 w-80 lg:w-90 h-72 rounded-xl">
+                            <video autoplay muted playsinline loop class="w-80 lg:w-90 h-auto rounded-xl">
+                                <source src="./image/202503151344.mp4" type="video/mp4" />
+                            </video>
                         </div>
                     </div>
                 </div>        
@@ -81,7 +85,7 @@
                 <hr class="border-0.5 border-[#643B27] w-full" />
                 <div class="justify-between flex">
                     <div class="text-4xl font-bold text-[#AD7561] my-2">Some of Works</div>
-                    <div class="ml-10 lg:ml-0 text-xl font-normal text-[#AD7561] my-auto">See More <span class="ml-1 text-[#ECD4C7] font-semibold">➙</span></div>
+                    <div class="ml-10 lg:ml-0 text-xl font-normal text-[#AD7561] my-auto"><a target="_blank" href="https://project.joschagabriel.com/">See More</a><span class="ml-1 text-[#ECD4C7] font-semibold"><a target="_blank" href="https://project.joschagabriel.com/">➙</a></span></div>
                 </div>
                 
                 <hr class="border-0.5 border-[#643B27] w-full" />
@@ -89,7 +93,11 @@
 
                 <div class="justify-between w-full inline-block lg:flex gap-14 mt-8">
                     <div class="12/12 lg:w-8/12 text-[#858585]">
-                        Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet.
+                        <div class="text-2xl underline font-bold text-[#AD7561] mt-2"><a href="">See More ➙</a></div>
+                        <p>
+                            Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet.
+                        </p>
+                        
 
                         <ul class="mt-2 ml-6 list-disc">
                             <li>A</li>
@@ -100,8 +108,8 @@
                         </ul>
                     </div>
                     <div class="">
-                        <div>
-                            <img src="" alt="" class="mt-10 lg:mt-0 w-full lg:w-[760px] h-90 rounded-xl pt-1 z-4 bg-slate-400">
+                        <div class="mt-10 lg:mt-0 w-full lg:w-[760px] h-90 rounded-xl pt-1 z-4 bg-slate-400">
+                            <img src="" alt="" class="">
                         </div>
                     </div>
                 </div>      
@@ -111,7 +119,7 @@
                 <div class="justify-between inline-block lg:flex gap-3">
                     <div class="w-12/12 lg:w-6/12 pr-0 lg:pr-3 border-0 lg:border-r lg:border-1-r border-[#643B27]">
                         <img src="" alt="" class="w-full h-70 rounded-xl pt-1 z-4 bg-slate-400">
-                        <div class="text-xl font-normal text-[#AD7561] mt-2">See More <span class="ml-1 text-[#ECD4C7] font-semibold">➙</span></div>
+                        <div class="text-xl underline font-normal text-[#AD7561] mt-2"><a href="">See More ➙</a></div>
                         <div class="text-[#858585]">
                             Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet.
         
@@ -126,7 +134,7 @@
                     </div>
                     <div class="mt-7 lg:mt-0 w-12/12 lg:w-3/12 pr-0 lg:pr-3 border-0 lg:border-r lg:border-1-r border-[#643B27]">
                         <img src="" alt="" class="w-full h-42 rounded-xl pt-1 z-4 bg-slate-400">
-                        <div class="text-xl font-normal text-[#AD7561] mt-2">See More <span class="ml-1 text-[#ECD4C7] font-semibold">➙</span></div>
+                        <div class="text-xl font-normal text-[#AD7561] mt-2"><a href="">See More ➙</a></div>
                         <div class="text-[#858585]">
                             Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet.
         
@@ -141,7 +149,7 @@
                     </div>
                     <div class="mb-10 lg:mb-0 mt-7 lg:mt-0 w-12/12 lg:w-3/12">
                         <img src="" alt="" class="w-full h-42 rounded-xl pt-1 z-4 bg-slate-400">
-                        <div class="text-xl font-normal text-[#AD7561] mt-2">See More <span class="ml-1 text-[#ECD4C7] font-semibold">➙</span></div>
+                        <div class="text-xl font-normal text-[#AD7561] mt-2"><a href="">See More ➙</a></div>
                         <div class="text-[#858585]">
                             Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet.
         
@@ -191,6 +199,10 @@
         <!-- Footer Component End -->
     </body>
 
+    <script src="https://vjs.zencdn.net/8.16.1/video.min.js">
+       
+    </script>
+
     <script type="module">
         const { animate, inView } = window.Motion
 
@@ -209,4 +221,6 @@
 
         })
     </script>
+
+    
 </html>
