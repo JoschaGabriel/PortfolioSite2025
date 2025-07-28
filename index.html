@@ -309,10 +309,21 @@
             <div class="main-text-ui opacity-0 p-2 mx-auto mb-20 text-center text-[#ECD4C7] text-xl hover:font-semibold hover:saturate-150">UI/UX Designers • UI Engineer</div>
             <div>
                 <a class="hover-container main-text-link opacity-0 mx-auto text-center text-[#9E7A68] text-lg mt-36 pt-36 animate-bounce z-40 group" href="#ScrollMore">
-                    <div class="text-center z-50 animate-bounce py-1 px-2 bg-[#382E2900] hover:font-semibold hover:bg-[#251F1C90] hover:brightness-120 w-fit mx-auto rounded-lg group">
-                        <img class="gif-image w-fit h-fit absolute opacity-15 bg-blend-overlay"
-                            src="./Scene-hover-under20.gif" alt="">
-                        <p class="paragraph-text">↓ Scroll down to explore more ↓</p>
+                    <div 
+                        x-data="{ hover: false }"
+                        @mouseenter="hover = true" 
+                        @mouseleave="hover = false"
+                        class="text-center z-50 animate-bounce py-1 px-3 bg-[#382E2900] hover:font-semibold hover:bg-[#251F1C90] hover:brightness-120 w-fit mx-auto rounded-lg group relative overflow-hidden">
+
+                        <!-- GIF image that only appears on hover -->
+                        <img 
+                            src="https://raw.githubusercontent.com/JoschaGabriel/PortfolioSite2025/refs/heads/main/Scene-hover-under20.gif" 
+                            alt="Scroll background effect"
+                            class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 pointer-events-none"
+                            :class="{ 'opacity-95': hover, 'opacity-0': !hover }" />
+
+                        <!-- Text stays visible at all times -->
+                        <p class="paragraph-text relative z-10">↓ Scroll down to explore more ↓</p>
                     </div>
                 </a>
 
@@ -440,17 +451,16 @@
         <div class="py-1">
             <img src="./image/work text.svg" alt="" class="py-20 w-96 lg:w-[450px] mx-auto z-4">
             <div class="mx-auto w-96 lg:w-[1160px] grid grid-cols-1 lg:grid-cols-2 gap-10 mb-28">
-                <div class="w-fit h-fit">
-                    <a target="_blank" href="https://project.joschagabriel.com/sleekfx-foreign-exchange-app/" 
-                    x-data="{
-                        originalSrc: './image/SleekFX_bg.png',
-                        hoverSrc: './sleekfxgif.gif',
-                        currentSrc: './image/SleekFX_bg.png'
-                    }"
-                    x-init="currentSrc = originalSrc"
-                    @mouseenter="currentSrc = hoverSrc"
-                    @mouseleave="currentSrc = originalSrc">
-                        <img class="object-cover transition ease-in duration-300 hover:-translate-y-1 hover:scale-105 transition-transform hover:rounded-3xl hover:shadow-lg hover:shadow-[#ffffff50] rounded-2xl w-96 lg:w-[560px] h-[420px]" :src="currentSrc" alt="">
+                <div class="relative w-fit h-fit"  x-data="{ hover: false }"
+                    @mouseenter="hover = true"
+                    @mouseleave="hover = false">
+                    <a target="_blank" href="https://project.joschagabriel.com/sleekfx-foreign-exchange-app/">
+                        <img class="absolute top-0 left-0 w-96 lg:w-[560px] h-[420px] rounded-2xl object-cover transition-opacity duration-300"
+                            src="./image/SleekFX_bg.png"
+                            :class="{ 'opacity-0': hover }" />
+                        <img class="relative w-96 lg:w-[560px] h-[420px] rounded-2xl object-cover duration-300 hover:-translate-y-1 hover:scale-105 transition-transform hover:rounded-3xl hover:shadow-lg hover:shadow-[#ffffff50]"
+                            src="https://raw.githubusercontent.com/JoschaGabriel/PortfolioSite2025/refs/heads/main/sleekfxgif.gif"
+                            :class="{ 'opacity-0': !hover }" />
                         <div class="mt-3 text-[#AD7561] font-bold text-3xl hover:brightness-120">SleekFx Foreign Exchange App</div>
                         <div class="mt-3 text-[#858585] w-96 lg:w-[560px]">The Background The client needed to create a foreign exchange application that was intuitive, easy to use, up-to-date (with a special focus on real-time foreign…</div>
                     </a>
@@ -462,19 +472,20 @@
                     </div>
                     <hr class="mt-3 border border-b-[#858585] w-96 lg:w-[560px]" />
                 </div>
-                <div class="w-fit h-fit">
-                    <a target="_blank" href="https://project.joschagabriel.com/mama-rent-pump/"
-                    x-data="{
-                        originalSrc: './image/MamaRentPump_newbg.png',
-                        hoverSrc: './mamarentpumpgif.gif',
-                        currentSrc: './image/MamaRentPump_newbg.png'
-                    }"
-                    x-init="currentSrc = originalSrc"
-                    @mouseenter="currentSrc = hoverSrc"
-                    @mouseleave="currentSrc = originalSrc">
-                        <img class="object-cover transition ease-in duration-300 hover:-translate-y-1 hover:scale-100 transition-transform hover:rounded-3xl hover:shadow-lg hover:shadow-[#ffffff50] rounded-2xl w-96 lg:w-[560px] h-[420px]" :src="currentSrc" alt="">
-                        <div class="mt-3 text-[#AD7561] font-bold text-3xl hover:brightness-120">Mama Rent Pump</div>
-                        <div class="mt-3 text-[#858585] w-96 lg:w-[560px]">The Background Mama Rent Pump is a well-known online store that has sold thousands of products on major e-commerce platforms in Indonesia. The company realized…</div>
+                <div class="relative w-fit h-fit" x-data="{ hover: false }"
+                    @mouseenter="hover = true"
+                    @mouseleave="hover = false">
+                    <a target="_blank" href="https://project.joschagabriel.com/mama-rent-pump/">
+                        <img class="absolute top-0 left-0 w-96 lg:w-[560px] h-[420px] rounded-2xl object-cover transition-opacity duration-300"
+                            src="./image/MamaRentPump_newbg.png"
+                            :class="{ 'opacity-0': hover }" />
+                        <img class="relative w-96 lg:w-[560px] h-[420px] rounded-2xl object-cover duration-300 hover:-translate-y-1 hover:scale-105 transition-transform hover:rounded-3xl hover:shadow-lg hover:shadow-[#ffffff50]"
+                            src="https://raw.githubusercontent.com/JoschaGabriel/PortfolioSite2025/refs/heads/main/mamarentpumpgif.gif"
+                            :class="{ 'opacity-0': !hover }" />
+                        <div class="mt-[420px] text-[#AD7561] font-bold text-3xl hover:brightness-120">Mama Rent Pump</div>
+                        <div class="mt-3 text-[#858585] w-96 lg:w-[560px]">
+                        The Background Mama Rent Pump is a well-known online store that has sold thousands of products on major e-commerce platforms in Indonesia. The company realized…
+                        </div>
                     </a>
                     <div class="mt-3 w-96 lg:w-[560px] justify-between flex">
                         <div></div>
@@ -484,17 +495,16 @@
                     </div>
                     <hr class="mt-3 border border-b-[#858585] w-96 lg:w-[560px]" />
                 </div>
-                <div class="w-fit h-fit">
-                    <a target="_blank" href="https://project.joschagabriel.com/algoritm-studio/"
-                    x-data="{
-                        originalSrc: 'https://project.joschagabriel.com/wp-content/uploads/2025/02/image-21.png',
-                        hoverSrc: './algoritmdesigngif.gif',
-                        currentSrc: 'https://project.joschagabriel.com/wp-content/uploads/2025/02/image-21.png'
-                    }"
-                    x-init="currentSrc = originalSrc"
-                    @mouseenter="currentSrc = hoverSrc"
-                    @mouseleave="currentSrc = originalSrc">
-                        <img class="object-cover transition ease-in duration-300 hover:-translate-y-1 hover:scale-105 transition-transform hover:rounded-3xl hover:shadow-lg hover:shadow-[#ffffff50] rounded-2xl w-96 lg:w-[560px] h-[420px]" :src="currentSrc" alt="">
+                <div class="relative w-fit h-fit" x-data="{ hover: false }"
+                    @mouseenter="hover = true"
+                    @mouseleave="hover = false">
+                    <a target="_blank" href="https://project.joschagabriel.com/algoritm-studio/">
+                        <img class="absolute top-0 left-0 w-96 lg:w-[560px] h-[420px] rounded-2xl object-cover transition-opacity duration-300"
+                            src="https://project.joschagabriel.com/wp-content/uploads/2025/02/image-21.png"
+                            :class="{ 'opacity-0': hover }" />
+                        <img class="relative w-96 lg:w-[560px] h-[420px] rounded-2xl object-cover duration-300 hover:-translate-y-1 hover:scale-105 transition-transform hover:rounded-3xl hover:shadow-lg hover:shadow-[#ffffff50]"
+                            src="https://raw.githubusercontent.com/JoschaGabriel/PortfolioSite2025/refs/heads/main/algoritmdesigngif.gif"
+                            :class="{ 'opacity-0': !hover }" />
                         <div class="mt-3 text-[#AD7561] font-bold text-3xl hover:brightness-120">Algoritm Studio</div>
                         <div class="mt-3 text-[#858585] w-96 lg:w-[560px]">The Background Description Coming Soon 🔜</div>
                     </a>
@@ -507,17 +517,16 @@
                     </div>
                     <hr class="mt-3 border border-b-[#858585] w-96 lg:w-[560px]" />
                 </div>
-                <div class="w-fit h-fit">
-                    <a target="_blank" href="https://project.joschagabriel.com/hello-world-alpha/"
-                    x-data="{
-                        originalSrc: 'https://project.joschagabriel.com/wp-content/uploads/2025/02/image-4.png',
-                        hoverSrc: './savingg-app-gif.gif',
-                        currentSrc: 'https://project.joschagabriel.com/wp-content/uploads/2025/02/image-4.png'
-                    }"
-                    x-init="currentSrc = originalSrc"
-                    @mouseenter="currentSrc = hoverSrc"
-                    @mouseleave="currentSrc = originalSrc">
-                        <img class="object-cover transition ease-in duration-300 hover:-translate-y-1 hover:scale-105 transition-transform hover:rounded-3xl hover:shadow-lg hover:shadow-[#ffffff50] rounded-2xl w-96 lg:w-[560px] h-[420px]" :src="currentSrc" alt="">
+                <div class="relative w-fit h-fit"  x-data="{ hover: false }"
+                    @mouseenter="hover = true"
+                    @mouseleave="hover = false">
+                    <a target="_blank" href="https://project.joschagabriel.com/hello-world-alpha/">
+                        <img class="absolute top-0 left-0 w-96 lg:w-[560px] h-[420px] rounded-2xl object-cover transition-opacity duration-300"
+                            src="https://project.joschagabriel.com/wp-content/uploads/2025/02/image-4.png"
+                            :class="{ 'opacity-0': hover }" />
+                        <img class="relative w-96 lg:w-[560px] h-[420px] rounded-2xl object-cover duration-300 hover:-translate-y-1 hover:scale-105 transition-transform hover:rounded-3xl hover:shadow-lg hover:shadow-[#ffffff50]"
+                            src="https://raw.githubusercontent.com/JoschaGabriel/PortfolioSite2025/refs/heads/main/savingg-app-gif.gif"
+                            :class="{ 'opacity-0': !hover }" />
                         <div class="mt-3 text-[#AD7561] font-bold text-3xl hover:brightness-120">Savingg App</div>
                         <div class="mt-3 text-[#858585] w-96 lg:w-[560px]">The background of this project is an effort to produce an application with medium-scale complexity, with problems related to everyday life. During idea exploration, the…</div>
                     </a>
