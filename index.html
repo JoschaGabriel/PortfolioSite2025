@@ -180,124 +180,130 @@
     <div class="overflow-hidden container w-screen h-screen">
         <img src="./image/radial top left.svg" alt="" class="top-0 left-0 scale-100 lg:scale-150 saturate-150 z-20 absolute animate-pulse hover:saturate-200 hover:blur-xs hover:transition">
         <img src="./image/background line.svg" alt="" class="mx-auto w-screen -z-10 absolute overflow-hidden animate-pulse saturate-200">
-        <div class="absolute w-screen h-screen pt-96 -z-20 bg-blend-overlay">
-            <!-- 3D Playground -->
-            <canvas class="" id="threeJsCanvas"></canvas>
+        <div class="absolute w-screen h-screen pt-96 -z-20 bg-blend-overlay hidden">
+        <!-- Placeholder image shown while model loads -->
+        <div id="placeholder" style="
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            background: url('path/to/your/optimized-placeholder.jpg') center/cover no-repeat;
+            z-index: -19;
+            transition: opacity 1s ease;
+        "></div>
 
-            <!-- Three.js Library -->
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-            <!-- GLTFLoader for loading glTF models -->
-            <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+        <!-- 3D Playground Canvas -->
+        <canvas id="threeJsCanvas" style="display: none;"></canvas>
 
-            <script type="module">
-                let scene, camera, renderer, model;
-                let mouseX = 0, mouseY = 0; // Store mouse coordinates
-                let targetRotationX = 0, targetRotationY = 0; // Target rotation values for the model
+        <!-- Three.js Library -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
 
-                // Initialize the Three.js scene, camera, and renderer
-                function init() {
-                    // Get the canvas element
-                    const canvas = document.getElementById('threeJsCanvas');
+        <script type="module">
+            let scene, camera, renderer, model;
 
-                    // 1. Scene: Where all objects, cameras, and lights are placed.
-                    scene = new THREE.Scene();
-                    scene.background = new THREE.Color(0x171717); // Set a background color for the scene
+            function init() {
+            const canvas = document.getElementById('threeJsCanvas');
+            canvas.style.display = 'none'; // Hide canvas initially
 
-                    // 2. Camera: Defines what is visible in the scene.
-                    // PerspectiveCamera(fov, aspect, near, far)
-                    camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.5, 1000);
-                    camera.position.z = 5; // Position the camera back to see the model
+            scene = new THREE.Scene();
+            scene.background = new THREE.Color(0x171717);
 
-                    // 3. Renderer: Renders the scene using WebGL.
-                    renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true });
-                    renderer.setSize(window.innerWidth, window.innerHeight); // Set renderer size to full window
-                    renderer.setPixelRatio(window.devicePixelRatio); // Handle high DPI screens
+            camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.5, 1000);
+            camera.position.z = 5;
 
-                    // Add ambient light to illuminate the scene uniformly
-                    const ambientLight = new THREE.AmbientLight(0xffffff, 0.7); // Soft white light
-                    scene.add(ambientLight);
+            renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true });
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.setPixelRatio(window.devicePixelRatio);
 
-                    // Add directional light for shadows and more defined lighting
-                    const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5);
-                    directionalLight.position.set(0, 2, 5); // Position the light
-                    scene.add(directionalLight);
+            const ambientLight = new THREE.AmbientLight(0xffffff, 0.7);
+            scene.add(ambientLight);
 
-                    // Load a glTF model
-                    const loader = new THREE.GLTFLoader();
-                    // Using a sample glTF model (e.g., a simple cube or a publicly available model)
-                    // Replace 'path/to/your/model.glb' with the actual path to your exported glTF file.
-                    // For demonstration, we'll use a simple cube geometry as a placeholder if no model is loaded.
-                    // In a real scenario, you would replace this with your actual .glb or .gltf path.
-                    loader.load(
-                        'https://raw.githubusercontent.com/JoschaGabriel/PortfolioSite2025/main/3d/asset3d.glb', // Example public glTF model
-                        function (gltf) {
-                            model = gltf.scene;
-                            scene.add(model);
-                            // Scale the model down if it's too big
-                            model.scale.set(7, 7, 7); // Adjust scale as needed
-                            console.log('Model loaded successfully!');
-                        },
-                        undefined, // Optional: called while loading is progressing
-                        function (error) {
-                            console.error('An error occurred while loading the model:', error);
-                            // Fallback: If model fails to load, create a simple box
-                            const geometry = new THREE.BoxGeometry(1, 1, 1);
-                            const material = new THREE.MeshPhongMaterial({ color: 0x007bff, flatShading: true });
-                            model = new THREE.Mesh(geometry, material);
-                            scene.add(model);
-                            console.log('Using fallback cube model.');
-                        }
-                    );
+            const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5);
+            directionalLight.position.set(0, 2, 5);
+            scene.add(directionalLight);
 
-                    // Event listener for mouse movement
-                    document.addEventListener('mousemove', onDocumentMouseMove, false);
-                    // Event listener for window resizing
-                    window.addEventListener('resize', onWindowResize, false);
+            const loader = new THREE.GLTFLoader();
+            loader.load(
+                'https://raw.githubusercontent.com/JoschaGabriel/PortfolioSite2025/main/3d/asset3d.glb',
+                function (gltf) {
+                model = gltf.scene;
+                scene.add(model);
+                model.scale.set(7, 7, 7);
+
+                // Show canvas and fade out placeholder after model loads
+                const placeholder = document.getElementById('placeholder');
+                placeholder.style.opacity = 0;
+                setTimeout(() => {
+                    placeholder.style.display = 'none';
+                    canvas.style.display = 'block';
+                    canvas.style.opacity = 0;
+                    canvas.style.transition = 'opacity 1s ease';
+                    setTimeout(() => { canvas.style.opacity = 1; }, 100);
+                }, 1000);
+
+                console.log('Model loaded successfully!');
+                },
+                undefined,
+                function (error) {
+                console.error('An error occurred while loading the model:', error);
+                // Fallback cube
+                const geometry = new THREE.BoxGeometry(1, 1, 1);
+                const material = new THREE.MeshPhongMaterial({ color: 0x007bff, flatShading: true });
+                model = new THREE.Mesh(geometry, material);
+                scene.add(model);
+
+                // Show fallback canvas same way
+                const placeholder = document.getElementById('placeholder');
+                placeholder.style.opacity = 0;
+                setTimeout(() => {
+                    placeholder.style.display = 'none';
+                    canvas.style.display = 'block';
+                    canvas.style.opacity = 0;
+                    canvas.style.transition = 'opacity 1s ease';
+                    setTimeout(() => { canvas.style.opacity = 1; }, 100);
+                }, 1000);
+
+                console.log('Using fallback cube model.');
                 }
+            );
 
-                // Handle mouse movement to update target rotation
-                function onDocumentMouseMove(event) {
-                    // Normalize mouse coordinates to a range of -1 to 1
-                    // X-axis: -1 (left) to 1 (right)
-                    // Y-axis: -1 (top) to 1 (bottom)
-                    mouseX = (event.clientX / window.innerWidth) * 2 - 1;
-                    mouseY = -(event.clientY / window.innerHeight) * 2 + 1;
+            document.addEventListener('mousemove', onDocumentMouseMove, false);
+            window.addEventListener('resize', onWindowResize, false);
+            }
 
-                    // Map mouse coordinates to desired rotation angles
-                    // We'll use a small multiplier to control the intensity of the rotation
-                    targetRotationY = mouseX * (Math.PI / 4); // Rotate around Y-axis based on X mouse position
-                    targetRotationX = mouseY * (Math.PI / 4); // Rotate around X-axis based on Y mouse position
-                }
+            let mouseX = 0, mouseY = 0;
+            let targetRotationX = 0, targetRotationY = 0;
 
-                // Handle window resizing
-                function onWindowResize() {
-                    camera.aspect = window.innerWidth / window.innerHeight;
-                    camera.updateProjectionMatrix();
-                    renderer.setSize(window.innerWidth, window.innerHeight);
-                }
+            function onDocumentMouseMove(event) {
+            mouseX = (event.clientX / window.innerWidth) * 2 - 1;
+            mouseY = -(event.clientY / window.innerHeight) * 2 + 1;
 
-                // Animation loop: called every frame
-                function animate() {
-                    requestAnimationFrame(animate); // Request the next frame
+            targetRotationY = mouseX * (Math.PI / 4);
+            targetRotationX = mouseY * (Math.PI / 4);
+            }
 
-                    if (model) {
-                        // Smoothly interpolate the model's rotation towards the target rotation
-                        // This creates a smoother, less jerky movement
-                        model.rotation.y += (targetRotationY - model.rotation.y) * 0.05;
-                        model.rotation.x += (targetRotationX - model.rotation.x) * 0.05;
-                    }
+            function onWindowResize() {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            }
 
-                    renderer.render(scene, camera); // Render the scene
-                }
+            function animate() {
+            requestAnimationFrame(animate);
+            if (model) {
+                model.rotation.y += (targetRotationY - model.rotation.y) * 0.05;
+                model.rotation.x += (targetRotationX - model.rotation.x) * 0.05;
+            }
+            renderer.render(scene, camera);
+            }
 
-                // Initialize the scene and start the animation loop when the window loads
-                window.onload = function () {
-                    init();
-                    animate();
-                };
-            </script>
-            <!-- end 3D Playground -->
+            window.onload = function () {
+            init();
+            animate();
+            };
+        </script>
         </div>
+
         <div class="items-center inset-0 justify-center z-50 inline-block text-center w-screen">
             <div class="opacity-0 main-text-logo px-7 pt-40 lg:pt-20 mx-auto">
                 <img src="./image/hero icon JG.png" alt="" class="mx-auto h-[115px] w-[94px] pt-8 z-30 hover:invert">
