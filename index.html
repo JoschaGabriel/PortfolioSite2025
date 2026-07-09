@@ -94,8 +94,8 @@
 
 <body class="bg-[#171717] w-full m-0 overflow-x-hidden">
     <!-- Header -->
-    <div id="myHeader" class="scroll-section-down justify-between bg-[#17171795] backdrop-blur-md drop-shadow-md py-2 text-[#858585] h-fit border-b-1 border-[#643B27] fixed pt-4 lg:pt-2 lg:top-0 right-0 left-0 z-50 hidden transition ease-in">
-        <div class="w-full px-4 lg:px-24">
+    <div id="myHeader" class="scroll-section-down justify-between bg-[#17171795] backdrop-blur-md drop-shadow-md py-2 text-[#858585] h-fit w-full border-b-1 border-[#643B27] fixed pt-2 top-0 right-0 left-0 z-50 hidden transition ease-in">
+        <div class="w-full py-4 lg:py-2 px-4 lg:px-24">
             <div class="flex justify-between">
                 <a href="./index.html">
                     <div class="my-auto w-20 h-12 overflow-hidden">
@@ -168,7 +168,7 @@
     <!-- Header End -->
 
     <!-- pop up tl dr -->
-    <div id="pop-up-home" class="popup scroll-section-left lg:w-75 h-25 z-50 right-10 lg:right-10 absolute fixed mt-22 lg:mt-24">
+    <div id="pop-up-home" class="popup scroll-section-left lg:w-75 h-25 z-50 right-8 lg:right-10 absolute fixed mt-22 lg:mt-24">
             <button id="closePopup" class="bg-[#F1F1EF] w-8 h-8 mx-auto text-center text-[#404040] text-md font-bold py-0.5 border-1 border-[#C0C0C0] rounded-full absolute -top-4 -right-4 cursor-pointer">X</button>
             <div class="w-75 text-black bg-[#E2DFDB] rounded-xl flex shadow-lg shadow-[#ffffff50]">
             <div class="w-13 text-3xl mx-auto px-3 my-auto">
@@ -179,12 +179,12 @@
     </div>
     <!-- pop up tl dr -->
 
-    <div class="overflow-hidden container w-screen h-screen">
+    <div class="overflow-hidden container w-full h-screen">
         <img src="./image/radial top left.svg" alt="" class="top-0 left-0 scale-100 lg:scale-150 saturate-150 z-20 absolute animate-pulse hover:saturate-200 hover:blur-xs hover:transition">
         <img src="./image/background line.svg" alt="" class="mx-auto w-screen -z-10 absolute overflow-hidden animate-pulse saturate-200">
 
 
-        <div class="items-center inset-0 justify-center z-50 inline-block text-center w-screen">
+        <div class="items-center inset-0 justify-center p-4 z-50 inline-block text-center w-screen">
             <div class="opacity-0 main-text-logo px-7 pt-40 lg:pt-20 mx-auto">
                 <img src="./image/hero icon JG.png" alt="" class="mx-auto h-[115px] w-[94px] pt-8 z-30 hover:invert">
             </div>
@@ -267,7 +267,7 @@
         </div>
     </div> -->
 
-    <div id="liquid-section" class="p-18 lg:p-24 z-40 container-text liquid-section background-liquid-section">
+    <div id="liquid-section" class="w-full p-12 lg:p-24 z-40 container-text liquid-section background-liquid-section">
         <div>
             <div id="liquid-glass" class="liquid-glass">
                 <div class="glass-text"></div>
@@ -283,7 +283,7 @@
                 </defs>
                 </svg>
             </div>
-        <div class="p-4 mx-auto w-fit text-center bg-[#2A231F] text-[56px] rounded-2xl">💻🎨📱</div>
+        <div class="p-4 mx-auto w-fit text-center bg-[#2A231F] text-4xl lg:text-[56px] rounded-2xl">💻🎨📱</div>
         <div class="mx-auto text-center text-xl lg:text-2xl text-[#858585] w-64 lg:w-[700px] mt-12 hover-text">Creative experience in <span class="text-link1 underline text-[#9E7A68] hover:brightness-120 hover:cursor-grabbing hover:font-semibold">B2B e-commerce</span>, <span class="text-link2 hover:cursor-grabbing underline text-[#9E7A68] hover:brightness-120 hover:font-semibold">hospitality</span>, <span class="text-link3 hover-text underline text-[#9E7A68] hover:brightness-120 hover:cursor-grabbing hover:font-semibold">Cryptocurrency</span>, and <span class="text-link4 hover-text underline text-[#9E7A68] hover:brightness-120 hover:cursor-grabbing hover:font-semibold">industrial sector</span>, provide with vast breadth of inspiration to draw form.</div>
         <div class="image-popup1 object-cover hidden absolute left-4 transition-transform rounded-xl z-50 w-75 h-50">
             <img loading="lazy" class="rounded-lg" src="./Porto Image/_IDH.jpg" alt="Another Image">
@@ -336,93 +336,77 @@
     <div id="ScrollMore" class="">
         <div class="py-1">
             <img src="./image/work text.svg" alt="" class="py-20 w-96 lg:w-[450px] mx-auto z-4">
-            <div class="mx-auto w-96 lg:w-[1160px] grid grid-cols-1 lg:grid-cols-2 gap-10 mb-28">
-                <div class="relative w-fit h-fit"  x-data="{ hover: false }"
-                    @mouseenter="hover = true"
-                    @mouseleave="hover = false">
+            <div class="mx-auto px-4 w-full lg:w-[1160px] grid grid-cols-1 lg:grid-cols-2 gap-10 mb-20 lg:mb-28">
+                <!-- Card 1: SleekFx -->
+                <div class="relative w-full h-fit mx-auto" x-data="{ hover: false }" @mouseenter="hover = true" @mouseleave="hover = false">
                     <a target="_blank" href="https://joschagabriel.super.site/my-projects/effectx-app">
-                        <img loading="lazy" class="absolute top-0 left-0 w-96 lg:w-[560px] h-[420px] rounded-2xl object-cover transition-opacity duration-300"
-                            src="https://raw.githubusercontent.com/JoschaGabriel/PortfolioSite2025/refs/heads/main/image/SleekFX_bg.png"
-                            :class="{ 'opacity-0': hover }" />
-                        <img loading="lazy" class="relative w-96 lg:w-[560px] h-[420px] rounded-2xl object-cover duration-300 hover:-translate-y-1 hover:scale-105 transition-transform hover:rounded-3xl hover:shadow-lg hover:shadow-[#ffffff50]"
-                            src="https://raw.githubusercontent.com/JoschaGabriel/PortfolioSite2025/refs/heads/main/sleekfxgif.gif"
-                            :class="{ 'opacity-0': !hover }" />
+                        <img loading="lazy" class="absolute top-0 left-0 w-full lg:w-[560px] h-[420px] rounded-2xl object-cover transition-opacity duration-300" src="https://raw.githubusercontent.com/JoschaGabriel/PortfolioSite2025/refs/heads/main/image/SleekFX_bg.png" :class="{ 'opacity-0': hover }">
+                        <img loading="lazy" class="relative w-full lg:w-[560px] h-[420px] rounded-2xl object-cover duration-300 hover:-translate-y-1 hover:scale-105 transition-transform hover:rounded-3xl hover:shadow-lg hover:shadow-[#ffffff50] opacity-0" src="https://raw.githubusercontent.com/JoschaGabriel/PortfolioSite2025/refs/heads/main/sleekfxgif.gif" :class="{ 'opacity-0': !hover }">
                         <div class="mt-3 text-[#AD7561] font-bold text-3xl hover:brightness-120">SleekFx Foreign Exchange App</div>
-                        <div class="mt-3 text-[#858585] w-96 lg:w-[560px]">The Background The client needed to create a foreign exchange application that was intuitive, easy to use, up-to-date (with a special focus on real-time foreign…</div>
+                        <div class="mt-3 text-[#858585] w-full lg:w-[560px]">The Background The client needed to create a foreign exchange application that was intuitive, easy to use, up-to-date (with a special focus on real-time foreign…</div>
                     </a>
-                    <div class="mt-3 w-96 lg:w-[560px] justify-between flex">
+                    <div class="mt-3 w-full lg:w-[560px] justify-between flex">
                         <div></div>
                         <a target="_blank" class="w-fit hover:brightness-120" href="https://joschagabriel.super.site/my-projects/effectx-app">
                             <img src="./image/arrow blog button.svg" alt="">
                         </a>
                     </div>
-                    <hr class="mt-3 border border-b-[#858585] w-96 lg:w-[560px]" />
+                    <hr class="mt-3 border border-b-[#858585] w-full lg:w-[560px]">
                 </div>
-                <div class="relative w-fit h-fit" x-data="{ hover: false }"
-                    @mouseenter="hover = true"
-                    @mouseleave="hover = false">
+
+                <!-- Card 2: Mama Rent Pump -->
+                <div class="relative w-full h-fit mx-auto" x-data="{ hover: false }" @mouseenter="hover = true" @mouseleave="hover = false">
                     <a target="_blank" href="https://joschagabriel.super.site/my-projects/mama-rent-pump">
-                        <img loading="lazy" class="absolute top-0 left-0 w-96 lg:w-[560px] h-[420px] rounded-2xl object-cover transition-opacity duration-300"
-                            src="https://raw.githubusercontent.com/JoschaGabriel/PortfolioSite2025/refs/heads/main/image/MamaRentPump_newbg.png"
-                            :class="{ 'opacity-0': hover }" />
-                        <img loading="lazy" class="relative w-96 lg:w-[560px] h-[420px] rounded-2xl object-cover duration-300 hover:-translate-y-1 hover:scale-105 transition-transform hover:rounded-3xl hover:shadow-lg hover:shadow-[#ffffff50]"
-                            src="https://raw.githubusercontent.com/JoschaGabriel/PortfolioSite2025/refs/heads/main/mamarentpumpgif.gif"
-                            :class="{ 'opacity-0': !hover }" />
-                        <div class="mt-[420px] text-[#AD7561] font-bold text-3xl hover:brightness-120">Mama Rent Pump</div>
-                        <div class="mt-3 text-[#858585] w-96 lg:w-[560px]">
+                        <img loading="lazy" class="absolute top-0 left-0 w-full lg:w-[560px] h-[420px] rounded-2xl object-cover transition-opacity duration-300" src="https://raw.githubusercontent.com/JoschaGabriel/PortfolioSite2025/refs/heads/main/image/MamaRentPump_newbg.png" :class="{ 'opacity-0': hover }">
+                        <img loading="lazy" class="relative w-full lg:w-[560px] h-[420px] rounded-2xl object-cover duration-300 hover:-translate-y-1 hover:scale-105 transition-transform hover:rounded-3xl hover:shadow-lg hover:shadow-[#ffffff50] opacity-0" src="https://raw.githubusercontent.com/JoschaGabriel/PortfolioSite2025/refs/heads/main/mamarentpumpgif.gif" :class="{ 'opacity-0': !hover }">
+                        <!-- Fixed typo: Changed mt-[420px] to mt-3 so the title aligns correctly below the image -->
+                        <div class="mt-3 text-[#AD7561] font-bold text-3xl hover:brightness-120">Mama Rent Pump</div>
+                        <div class="mt-3 text-[#858585] w-full lg:w-[560px]">
                         The Background Mama Rent Pump is a well-known online store that has sold thousands of products on major e-commerce platforms in Indonesia. The company realized…
                         </div>
                     </a>
-                    <div class="mt-3 w-96 lg:w-[560px] justify-between flex">
+                    <div class="mt-3 w-full lg:w-[560px] justify-between flex">
                         <div></div>
                         <a target="_blank" class="w-fit hover:brightness-120" href="https://joschagabriel.super.site/my-projects/mama-rent-pump">
                             <img src="./image/arrow blog button.svg" alt="">
                         </a>
                     </div>
-                    <hr class="mt-3 border border-b-[#858585] w-96 lg:w-[560px]" />
+                    <hr class="mt-3 border border-b-[#858585] w-full lg:w-[560px]">
                 </div>
-                <div class="relative w-fit h-fit" x-data="{ hover: false }"
-                    @mouseenter="hover = true"
-                    @mouseleave="hover = false">
+
+                <!-- Card 3: Algoritm Studio -->
+                <div class="relative w-full h-fit mx-auto" x-data="{ hover: false }" @mouseenter="hover = true" @mouseleave="hover = false">
                     <a target="_blank" href="https://joschagabriel.super.site/my-projects/algoritm-studio">
-                        <img loading="lazy" class="absolute top-0 left-0 w-96 lg:w-[560px] h-[420px] rounded-2xl object-cover transition-opacity duration-300"
-                            src="./image/algortimbg2.webp"
-                            :class="{ 'opacity-0': hover }" />
-                        <img loading="lazy" class="relative w-96 lg:w-[560px] h-[420px] rounded-2xl object-cover duration-300 hover:-translate-y-1 hover:scale-105 transition-transform hover:rounded-3xl hover:shadow-lg hover:shadow-[#ffffff50]"
-                            src="https://raw.githubusercontent.com/JoschaGabriel/PortfolioSite2025/refs/heads/main/algoritmdesigngif.gif"
-                            :class="{ 'opacity-0': !hover }" />
+                        <img loading="lazy" class="absolute top-0 left-0 w-full lg:w-[560px] h-[420px] rounded-2xl object-cover transition-opacity duration-300" src="./image/algortimbg2.webp" :class="{ 'opacity-0': hover }">
+                        <img loading="lazy" class="relative w-full lg:w-[560px] h-[420px] rounded-2xl object-cover duration-300 hover:-translate-y-1 hover:scale-105 transition-transform hover:rounded-3xl hover:shadow-lg hover:shadow-[#ffffff50] opacity-0" src="https://raw.githubusercontent.com/JoschaGabriel/PortfolioSite2025/refs/heads/main/algoritmdesigngif.gif" :class="{ 'opacity-0': !hover }">
                         <div class="mt-3 text-[#AD7561] font-bold text-3xl hover:brightness-120">Algoritm Studio</div>
-                        <div class="mt-3 text-[#858585] w-96 lg:w-[560px]">The Background Description Coming Soon 🔜</div>
+                        <div class="mt-3 text-[#858585] w-full lg:w-[560px]">The Background Description Coming Soon 🔜</div>
                     </a>
                     
-                    <div class="mt-3 w-96 lg:w-[560px] justify-between flex">
+                    <div class="mt-3 w-full lg:w-[560px] justify-between flex">
                         <div></div>
                         <a target="_blank" class="w-fit hover:brightness-120" href="https://joschagabriel.super.site/my-projects/algoritm-studio">
                             <img src="./image/arrow blog button.svg" alt="">
                         </a>
                     </div>
-                    <hr class="mt-3 border border-b-[#858585] w-96 lg:w-[560px]" />
+                    <hr class="mt-3 border border-b-[#858585] w-full lg:w-[560px]">
                 </div>
-                <div class="relative w-fit h-fit"  x-data="{ hover: false }"
-                    @mouseenter="hover = true"
-                    @mouseleave="hover = false">
+
+                <!-- Card 4: Savingg App -->
+                <div class="relative w-full h-fit mx-auto" x-data="{ hover: false }" @mouseenter="hover = true" @mouseleave="hover = false">
                     <a target="_blank" href="https://joschagabriel.super.site/savingg-app">
-                        <img loading="lazy" class="absolute top-0 left-0 w-96 lg:w-[560px] h-[420px] rounded-2xl object-cover transition-opacity duration-300"
-                            src="./image/Savinggbg.webp"
-                            :class="{ 'opacity-0': hover }" />
-                        <img loading="lazy" class="relative w-96 lg:w-[560px] h-[420px] rounded-2xl object-cover duration-300 hover:-translate-y-1 hover:scale-105 transition-transform hover:rounded-3xl hover:shadow-lg hover:shadow-[#ffffff50]"
-                            src="https://raw.githubusercontent.com/JoschaGabriel/PortfolioSite2025/refs/heads/main/savingg-app-gif.gif"
-                            :class="{ 'opacity-0': !hover }" />
+                        <img loading="lazy" class="absolute top-0 left-0 w-full lg:w-[560px] h-[420px] rounded-2xl object-cover transition-opacity duration-300" src="./image/Savinggbg.webp" :class="{ 'opacity-0': hover }">
+                        <img loading="lazy" class="relative w-full lg:w-[560px] h-[420px] rounded-2xl object-cover duration-300 hover:-translate-y-1 hover:scale-105 transition-transform hover:rounded-3xl hover:shadow-lg hover:shadow-[#ffffff50] opacity-0" src="https://raw.githubusercontent.com/JoschaGabriel/PortfolioSite2025/refs/heads/main/savingg-app-gif.gif" :class="{ 'opacity-0': !hover }">
                         <div class="mt-3 text-[#AD7561] font-bold text-3xl hover:brightness-120">Savingg App</div>
-                        <div class="mt-3 text-[#858585] w-96 lg:w-[560px]">The background of this project is an effort to produce an application with medium-scale complexity, with problems related to everyday life. During idea exploration, the…</div>
+                        <div class="mt-3 text-[#858585] w-full lg:w-[560px]">The background of this project is an effort to produce an application with medium-scale complexity, with problems related to everyday life. During idea exploration, the…</div>
                     </a>
-                    <div class="mt-3 w-96 lg:w-[560px] justify-between flex">
+                    <div class="mt-3 w-full lg:w-[560px] justify-between flex">
                         <div></div>
                         <a target="_blank" class="w-fit hover:brightness-120" href="https://joschagabriel.super.site/savingg-app">
                             <img src="./image/arrow blog button.svg" alt="">
                         </a>
                     </div>
-                    <hr class="mt-3 border border-b-[#858585] w-96 lg:w-[560px]" />
+                    <hr class="mt-3 border border-b-[#858585] w-full lg:w-[560px]">
                 </div>
             </div>
         </div>
@@ -796,11 +780,11 @@
                 </svg>                                                  
         </div>
         <!-- Cursor Second Section -->
-        <div class="p-14 lg:p-0 lg:w-[650px] font-bold text-left text-[#745545] text-[56px] leading-14">And then, here the section to reach me.
+        <div class="p-12 lg:p-0 lg:w-[650px] font-bold text-left text-[#745545] text-[56px] leading-14">And then, here the section to reach me.
             Lets beat all the brief!</div>
         <div class="px-14 lg:px-0 text-left text-2xl text-[#858585] w-88 lg:w-[700px] mt-2 lg:mt-8 mb-10 lg:mb-0">Thanks for reading this far, let’s connect!<br>
             I’m here - ready to answer - ready to help - ready to work with. Always.</div>
-        <div class="px-14 lg:px-0 mt-8 gap-5 flex cursor-pointer">
+        <div class="px-8 lg:px-0 mt-8 gap-5 flex cursor-pointer">
             <a class="w-fit bg-[#745545] text-[#ECD4C7] px-3 py-2 gap-3 lg:gap-2 flex rounded-lg hover:brightness-110 cursor-pointer" href="mailto:joschagabriel@gmail.com?subject=Hello%20Joscha!" target="_blank">
                 <div class="my-auto">
                     <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -846,10 +830,12 @@
 
     <!-- Footer -->
     <div class="flex justify-between px-4 lg:px-24 my-6 text-[#858585] h-fit">
-        <div class="my-auto">
-            <img class="w-10" src="./image/footer icon JG.png" alt="">
-        </div>
-        <div class="my-auto">2025 © Joscha Gabriel</div>
+        <a class="flex gap-2 lg:gap-2 hover:brightness-110 cursor-pointer" href="#">
+            <div class="my-auto">
+                <img class="w-10" src="./image/footer icon JG.png" alt="">
+            </div>
+            <div class="my-auto">2025 © Joscha Gabriel</div>
+        </a>
         <div class="my-auto h-fit hidden lg:inline">
             <div class="flex" x-data="{ zone: [] }"
             x-init="fetch('https://timeapi.io/api/time/current/zone?timeZone=Etc%2FGMT-0')
@@ -868,7 +854,7 @@
             <div>🚩 Based in Jakarta, Indonesia</div>
             <div class="animate-ping">|</div>
         </div>
-        <a class="font-bold text-[#745545] flex gap-2 hover:brightness-110 cursor-pointer" href="#">
+        <a class="font-bold text-[#745545] flex gap-0 lg:gap-2 hover:brightness-110 cursor-pointer" href="#">
             <div class="my-auto">Back to Top</div>
             <img class="mt-4 animate-bounce h-12 my-auto" src="./image/arrow_backtotop.svg" alt="">
         </a>
