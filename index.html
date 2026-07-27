@@ -457,7 +457,28 @@
                         </script>
                     </div>
                     
+                    <div class="item work-linkb" data-item="prodshort" data-targets="website, 2026, figma">ProdShort
+                        <div class="work-popupb hidden absolute left-40 transition-transform rounded-lg z-50 w-75 h-50">
+                            <img class="rounded-2xl" src="./Porto Image/prodshort_webp.webp" alt="Another Image">
+                        </div>
+                        <script>
+                            // Text Hover 1
+                            const workLinkb = document.querySelector('.work-linkb');
+                            const popupworkb = document.querySelector('.work-popupb');
+        
+                            workLinkb.addEventListener('mouseover', () => {
+                                popupworkb.style.display = 'block';
+                            });
+        
+                            workLinkb.addEventListener('mouseout', () => {
+                                popupworkb.style.display = 'none';
+                            });
+                            // Text Hover End
+                        </script>
+                    </div>
+
                     <div class="item" data-item="nk-lawfirm" data-targets="website, penpot, html5, 2023">NK Lawfirm</div>
+                    
                     <div class="item work-link2" data-item="mama-rent-pump" data-targets="website, figma, html5, tailwindcss, 2023">Mama Rent Pump
                         <div class="work-popup2 hidden absolute left-40 transition-transform rounded-lg z-50 w-75 h-50">
                             <img class="rounded-2xl" src="./Porto Image/Mamarentpump.jpg" alt="Another Image">
@@ -712,9 +733,9 @@
                 </div>
             </div>
             <div class="group hidden lg:inline" data-group="technology">
-                <div class="text-2xl text-[#745545] font-semibold mb-2">Technology</div>
+                <div class="text-2xl text-[#745545] font-semibold mb-2">Tech nology</div>
                 <div class="ml-4 text-lg text-[#C1A090] gap-2 [&>*]:hover:cursor-pointer">
-                    <div class="item" data-item="figma" data-targets="mobile-app, website, webapp, id-lite-net, nk-lawfirm, mama-rent-pump, savingg-app, jnj-data-recovery, algorithm-studio, effect-fx, baud-kids-app, solusi-sarana-persada, pt-hlks, alexander-photo-studio, mazda-batam, alexander-photo-bridal, rumahdi-bsd, space-marker-studio, kawaii-photo-studio, this-website, 2023, 2024, 2025">Figma</div>
+                    <div class="item" data-item="figma" data-targets="mobile-app, website, webapp, id-lite-net, prodshort, nk-lawfirm, mama-rent-pump, savingg-app, jnj-data-recovery, algorithm-studio, effect-fx, baud-kids-app, solusi-sarana-persada, pt-hlks, alexander-photo-studio, mazda-batam, alexander-photo-bridal, rumahdi-bsd, space-marker-studio, kawaii-photo-studio, this-website, 2023, 2024, 2025">Figma</div>
                     <div class="item" data-item="penpot" data-targets="website, nk-lawfirm, 2023">Penpot</div>
                     <div class="item" data-item="html5" data-targets="website, webapp, nk-lawfirm, mama-rent-pump, jnj-data-recovery, pt-hlks, this-website, 2023, 2024, 2025">HTML5</div>
                     <div class="item" data-item="wordpress" data-targets="website, id-lite-net, solusi-sarana-persada, alexander-photo-studio, mazda-batam, alexander-photo-bridal, rumahdi-bsd, kawaii-photo-studio, this-website, 2023, 2024, 2025">Wordpress</div>
@@ -731,6 +752,7 @@
                     <div class="item" data-item="2023" data-targets="nk-lawfirm, mama-rent-pump, savingg-app, jnj-data-recovery, algorithm-studio, monitoring-pupuk, website, webapp, mobile-app, figma, penpot, html5, tailwindcss, framer">2023</div>
                     <div class="item" data-item="2024" data-targets="id-lite-net, effect-fx, baud-kids-app, solusi-sarana-persada, pt-hlks, alexander-photo-bridal, alexander-photo-studio, rumahdi-bsd, space-marker-studio, kawaii-photo-studio, figma, html5, wordpress, tailwindcss, framer, website">2024</div>
                     <div class="item" data-item="2025" data-targets="website, this-website, figma, html5, wordpress, tailwindcss, motiondev, lenis,htmx">2025</div>
+                    <div class="item" data-item="2026" data-targets="website, prodshort, figma">2026</div>
                 </div>
                 <div class="absolute end-0 mb-20 px-40 hidden">
                     <img class="w-54 h-60 bg-slate-200" src="{.url}" alt="">
