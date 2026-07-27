@@ -12,6 +12,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
     <link rel="dns-prefetch" href="https://unpkg.com">
+    <script src="./anime.js" defer></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js" defer></script>
     <meta name="description" content="I'm Joscha Gabriel. Designer. I Prefer to be a passionate designer, combining aesthetics and problem-solving for intended to be a great user experience. I'm the person if you search for a person who can pull the colorful pallette out of the vase.">
 </head>
 
@@ -240,7 +242,7 @@
         <img src="./image/asset right bottom hero 1.svg" alt="" class="lg:inline-block hidden bottom-20 right-0 z-1 absolute hover:saturate-150 hover:transition" loading="lazy">
         <img src="./image/asset right bottom hero 2.svg" alt="" class="hidden lg:inline-block bottom-0 right-0 z-1 absolute hover:saturate-150 hover:transition" loading="lazy">
         <!-- Custom Cursor Hero -->
-        <div class="cursor-source fixed animate-spin">
+        <div class="cursor-source fixed animate-spin" style="position: fixed; width: 44px; height: 43px; pointer-events: none; display: none; z-index: 9999;">
             <svg class="" width="44" height="43" viewBox="0 0 44 43" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g class="">
                 <path class="backdrop-invert opacity-80" d="M18.3249 42.544C18.7516 42.5201 19.2629 42.3065 19.5847 42.0083L19.895 41.7157L21.7636 36.392C22.7892 33.4523 23.6436 31.0628 23.6606 31.0687C23.6861 31.0775 25.2661 32.8899 27.1911 35.1071C29.1076 37.3214 30.7774 39.2315 30.9097 39.3438C31.4754 39.8535 32.597 39.9651 33.1845 39.5588C33.8663 39.0995 38.0163 35.4022 38.2103 35.0884C38.5259 34.5882 38.5791 33.9116 38.3604 33.3885C38.2274 33.0855 37.1226 31.742 34.614 28.847C32.6468 26.5866 31.0505 24.7115 31.0623 24.6775C31.074 24.6435 33.4875 24.1543 36.4306 23.5911C40.1915 22.8631 41.8901 22.4886 42.1819 22.3324C42.8657 21.9499 43.2126 21.1939 43.0975 20.3163C42.9434 19.111 41.9627 14.3544 41.8068 14.0625C41.5094 13.4646 40.6733 12.9947 39.9989 13.0473C39.8254 13.0539 37.3325 13.5252 34.4577 14.0834C31.5744 14.6387 29.2125 15.0886 29.187 15.0798C29.17 15.074 29.9735 12.6668 30.9792 9.72975L32.7997 4.37998L32.7196 3.92386C32.6712 3.67864 32.5078 3.29845 32.3624 3.08633L32.0768 2.70199L28.6957 1.53334L25.3145 0.364691L24.8526 0.490635C24.6072 0.56768 24.2439 0.765814 24.0544 0.928819L23.7098 1.23812L21.8382 6.57028C20.8156 9.50147 19.9611 11.891 19.9356 11.8822C19.9187 11.8763 18.3302 10.061 16.4137 7.84671C14.4972 5.6324 12.8274 3.72235 12.695 3.60996C12.1464 3.10614 10.945 3.00508 10.3889 3.40317C9.61499 3.96397 5.57117 7.57418 5.39444 7.86536C5.07888 8.36562 5.0257 9.04225 5.2499 9.57674C5.37442 9.87684 6.46813 11.1974 8.99931 14.1097C10.955 16.3757 12.5513 18.2508 12.5425 18.2763C12.5337 18.3018 10.1173 18.7995 7.17416 19.3627C3.05714 20.158 1.72903 20.4511 1.41702 20.6384C0.904748 20.9374 0.557497 21.4743 0.491239 22.0512C0.450113 22.4178 1.43126 27.8887 1.68391 28.671C1.89506 29.3533 2.84624 29.9582 3.60588 29.9065C3.77937 29.8999 6.27226 29.4286 9.14708 28.8704C12.0219 28.3121 14.3923 27.8652 14.4093 27.871C14.4347 27.8799 13.6313 30.287 12.6227 33.2326L10.8051 38.5738L10.8852 39.03C10.9335 39.2752 11.0969 39.6554 11.2424 39.8675L11.528 40.2518L14.8013 41.4022C16.8457 42.1184 18.1713 42.548 18.3249 42.544Z" fill="#ECD4C7"/>
@@ -878,398 +880,346 @@
     </div>
     <!-- Footer End -->
 
-
     <script type="module">
-        const header = document.getElementById('myHeader');
-        const body = document.body;
-        let lastScrollTop = 0;
-      
+        // Wait for DOM and all libraries to load
+document.addEventListener('DOMContentLoaded', () => {
+    
+    // ===== HEADER SCROLL =====
+    const header = document.getElementById('myHeader');
+    const body = document.body;
+    let lastScrollTop = 0;
+  
+    if (header) {
         window.addEventListener('scroll', () => {
-          let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      
-          if (scrollTop > lastScrollTop) { // Scrolling down
-            header.classList.remove('hidden');
-            body.classList.add('body-padding'); // Add padding when header is visible
-          } else { // Scrolling up
-            header.classList.add('hidden');
-            body.classList.remove('body-padding'); // Remove padding when header is hidden
-          }
-          lastScrollTop = scrollTop;
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+            if (scrollTop > lastScrollTop) { // Scrolling down
+                header.classList.remove('hidden');
+                body.classList.add('body-padding');
+            } else { // Scrolling up
+                header.classList.add('hidden');
+                body.classList.remove('body-padding');
+            }
+            lastScrollTop = scrollTop;
         });
+    }
 
-        // Hover Master
-        const serviceItems = document.querySelectorAll('[data-targets]'); // Select the triggering items
-        const allItems = document.querySelectorAll('[data-item]'); // Select all target items
+    // ===== HOVER MASTER =====
+    const serviceItems = document.querySelectorAll('[data-targets]');
+    const allItems = document.querySelectorAll('[data-item]');
 
+    if (serviceItems.length > 0) {
         serviceItems.forEach(item => {
-        const targets = item.dataset.targets.split(',').map(target => target.trim()); // Get target IDs
-        
-        item.addEventListener('mouseenter', () => {
-        item.style.fontWeight = '600';
-        item.style.color = '#745545';
+            const targets = item.dataset.targets.split(',').map(target => target.trim());
+            
+            item.addEventListener('mouseenter', () => {
+                item.style.fontWeight = '600';
+                item.style.color = '#745545';
 
-        allItems.forEach(targetItem => {
-          if (targets.includes(targetItem.dataset.item)) {
-            targetItem.style.fontWeight = 'semibold';
-            targetItem.style.color = "#745545";
-            targetItem.style.textDecoration = 'underline';
-            }
+                allItems.forEach(targetItem => {
+                    if (targets.includes(targetItem.dataset.item)) {
+                        targetItem.style.fontWeight = 'semibold';
+                        targetItem.style.color = "#745545";
+                        targetItem.style.textDecoration = 'underline';
+                    }
+                });
+            });
+
+            item.addEventListener('mouseout', () => {
+                item.style.fontWeight = 'normal';
+                item.style.color = '#C1A090';
+
+                allItems.forEach(targetItem => {
+                    if (targets.includes(targetItem.dataset.item)) {
+                        targetItem.style.fontWeight = 'normal';
+                        targetItem.style.color = "#C1A090";
+                        targetItem.style.textDecoration = 'none';
+                    }
+                });
             });
         });
+    }
 
-        item.addEventListener('mouseout', () => {
-            item.style.fontWeight = 'normal';
-            item.style.color = '#C1A090';
+    // ===== TEXT HOVER EFFECTS =====
+    const textHovers = [
+        { textSelector: '.text-link1', popupSelector: '.image-popup1' },
+        { textSelector: '.text-link2', popupSelector: '.image-popup2' },
+        { textSelector: '.text-link3', popupSelector: '.image-popup3' },
+        { textSelector: '.text-link4', popupSelector: '.image-popup4' }
+    ];
 
-            allItems.forEach(targetItem => {
-            if (targets.includes(targetItem.dataset.item)) {
-                targetItem.style.fontWeight = 'normal';
-                targetItem.style.color = "#C1A090";
-                targetItem.style.textDecoration = 'none';
-            }
+    textHovers.forEach(({ textSelector, popupSelector }) => {
+        const textLink = document.querySelector(textSelector);
+        const popup = document.querySelector(popupSelector);
+
+        if (textLink && popup) {
+            textLink.addEventListener('mouseover', () => {
+                popup.style.display = 'block';
             });
+
+            textLink.addEventListener('mouseout', () => {
+                popup.style.display = 'none';
+            });
+        }
+    });
+
+    // ===== ANIME.JS ANIMATIONS =====
+    if (typeof anime !== 'undefined') {
+        const animationTargets = [
+            { selector: '.main-text-logo', delay: 10 },
+            { selector: '.main-text-hi', delay: 200 },
+            { selector: '.main-text-in', delay: 400 },
+            { selector: '.main-text-ui', delay: 600 },
+            { selector: '.main-text-link', delay: 800 }
+        ];
+
+        animationTargets.forEach(({ selector, delay }) => {
+            const elements = document.querySelectorAll(selector);
+            if (elements.length > 0) {
+                anime({
+                    delay: delay,
+                    opacity: 100,
+                    targets: elements,
+                    translateY: -20,
+                    duration: 3000,
+                    easing: 'easeInOutQuad',
+                });
+            }
         });
-        });
-        // Hover Master End
+    } else {
+        console.warn('anime.js is not loaded');
+    }
 
-        // Text Hover 1
-        const textLink1 = document.querySelector('.text-link1');
-        const popuptext1 = document.querySelector('.image-popup1');
+    // ===== POWERGLITCH =====
+    if (typeof PowerGlitch !== 'undefined') {
+        const glitchElements = document.querySelector('.glitch');
+        if (glitchElements) {
+            PowerGlitch.glitch('.glitch', {
+                "playMode": "hover",
+                "optimizeSeo": true,
+                "createContainers": true,
+                "hideOverflow": false,
+                "timing": {
+                    "duration": 2000
+                },
+                "glitchTimeSpan": {
+                    "start": 0.1,
+                    "end": 0.4
+                },
+                "shake": {
+                    "velocity": 15,
+                    "amplitudeX": 0.2,
+                    "amplitudeY": 0.2
+                },
+                "slice": {
+                    "count": 6,
+                    "velocity": 15,
+                    "minHeight": 0.02,
+                    "maxHeight": 0.15,
+                    "hueRotate": 0,
+                },
+                "pulse": false
+            });
+        }
+    } else {
+        console.warn('PowerGlitch is not loaded');
+    }
 
-        textLink1.addEventListener('mouseover', () => {
-        popuptext1.style.display = 'block';
-        });
+    // ===== POPUP =====
+    const popup = document.querySelector('.popup');
+    const closeButton = document.getElementById('closePopup');
+    let hasShown = false;
 
-        textLink1.addEventListener('mouseout', () => {
-        popuptext1.style.display = 'none';
-        });
-        // Text Hover End
-
-        // Text Hover 2
-        const textLink2 = document.querySelector('.text-link2');
-        const popuptext2 = document.querySelector('.image-popup2');
-
-        textLink2.addEventListener('mouseover', () => {
-        popuptext2.style.display = 'block';
-        });
-
-        textLink2.addEventListener('mouseout', () => {
-        popuptext2.style.display = 'none';
-        });
-        // Text Hover End
-
-        // Text Hover 3
-        const textLink3 = document.querySelector('.text-link3');
-        const popuptext3 = document.querySelector('.image-popup3');
-
-        textLink3.addEventListener('mouseover', () => {
-        popuptext3.style.display = 'block';
-        });
-
-        textLink3.addEventListener('mouseout', () => {
-        popuptext3.style.display = 'none';
-        });
-        // Text Hover End
-
-        // Text Hover 4
-        const textLink4 = document.querySelector('.text-link4');
-        const popuptext4 = document.querySelector('.image-popup4');
-
-        textLink4.addEventListener('mouseover', () => {
-        popuptext4.style.display = 'block';
-        });
-
-        textLink4.addEventListener('mouseout', () => {
-        popuptext4.style.display = 'none';
-        });
-        // Text Hover End
-
-        // Main Text Hero Anima
-        var elements = document.querySelectorAll('.main-text-logo');
-        anime({
-            delay: 10,
-            opacity: 100,
-            targets: elements,
-            translateY: -20,
-            duration: 3000,
-            easing: 'easeInOutQuad',
-        });
-        
-        var elements = document.querySelectorAll('.main-text-hi');
-        anime({
-            delay: 200,
-            opacity: 100,
-            targets: elements,
-            translateY: -20,
-            duration: 3000,
-            easing: 'easeInOutQuad',
-        });
-
-        var elements = document.querySelectorAll('.main-text-in');
-        anime({
-            delay: 400,
-            opacity: 100,
-            targets: elements,
-            translateY: -20,
-            duration: 3000,
-            easing: 'easeInOutQuad',
-        });
-
-        var elements = document.querySelectorAll('.main-text-ui');
-        anime({
-            delay: 600,
-            opacity: 100,
-            targets: elements,
-            translateY: -20,
-            duration: 3000,
-            easing: 'easeInOutQuad',
-        });
-
-        var elements = document.querySelectorAll('.main-text-link');
-        anime({
-            delay: 800,
-            opacity: 100,
-            targets: elements,
-            translateY: -40,
-            duration: 3000,
-            easing: 'easeInOutQuad',
-        });
-        // Main Text Hero Anima End
-
-        // Glitch
-        PowerGlitch.glitch('.glitch', 
-                {
-        "playMode": "hover",
-        "optimizeSeo": true,
-        "createContainers": true,
-        "hideOverflow": false,
-        "timing": {
-            "duration": 2000
-        },
-        "glitchTimeSpan": {
-            "start": 0.1,
-            "end": 0.4
-        },
-        "shake": {
-            "velocity": 15,
-            "amplitudeX": 0.2,
-            "amplitudeY": 0.2
-        },
-        "slice": {
-            "count": 6,
-            "velocity": 15,
-            "minHeight": 0.02,
-            "maxHeight": 0.15,
-            "hueRotate": 0,
-        },
-        "pulse": false
-        })
-
-        // Popup
-        const popup = document.querySelector('.popup');
-        const closeButton = document.getElementById('closePopup');
-        let hasShown = false; 
-
+    if (popup && closeButton) {
         closeButton.addEventListener('click', () => {
-            popup.style.display = 'none'; 
-            hasShown = true; // Mark as shown
+            popup.style.display = 'none';
+            hasShown = true;
         });
 
         window.addEventListener('scroll', () => {
-            if (window.scrollY === 0 && hasShown) { 
-            popup.style.display = 'block'; 
-            hasShown = false; // Reset for next appearance
+            if (window.scrollY === 0 && hasShown) {
+                popup.style.display = 'block';
+                hasShown = false;
             }
         });
-        // Pop Up End
+    }
 
-        // Scroll Section
-        const { animate, inView } = window.Motion
+    // ===== MOTION.JS SCROLL ANIMATIONS =====
+    if (typeof window.Motion !== 'undefined') {
+        const { animate, inView } = window.Motion;
 
-        inView(".menu1", (element) => {
-            animate(element, { opacity: 1,  x: 0,  y: 0 })
+        const scrollAnimations = [
+            { selector: '.menu1', y: -100, duration: 180 },
+            { selector: '.menu2', y: -150, duration: 190 },
+            { selector: '.menu3', y: -200, duration: 200 },
+            { selector: '.menu4', y: -250, duration: 210 }
+        ];
 
-            return () => animate(element, { opacity: 0, y: -100, duration: 180 })
-            })
+        scrollAnimations.forEach(({ selector, y, duration }) => {
+            const elements = document.querySelectorAll(selector);
+            if (elements.length > 0) {
+                inView(selector, (element) => {
+                    animate(element, { opacity: 1, x: 0, y: 0 });
+                    return () => animate(element, { opacity: 0, y: y, duration: duration });
+                });
+            }
+        });
 
-        inView(".menu2", (element) => {
-            animate(element, { opacity: 1,  x: 0,  y: 0 })
-
-            return () => animate(element, { opacity: 0, y: -150, duration: 190 })
-            })
-
-        inView(".menu3", (element) => {
-            animate(element, { opacity: 1,  x: 0,  y: 0 })
-
-            return () => animate(element, { opacity: 0, y: -200, duration: 200 })
-            })
-        
-        inView(".menu4", (element) => {
-            animate(element, { opacity: 1,  x: 0,  y: 0 })
-
-            return () => animate(element, { opacity: 0, y: -250, duration: 210 })
-            })
-
-            inView(".scroll-section-right", (element) => {
-            animate(
-                element,
-                { opacity: 1, x: [-100, 0] },
-                {
-                    duration: 0.9,
-                    easing: [0.17, 0.55, 0.55, 1],
-                }
-            )
-
-            return () => animate(element, { opacity: 0, x: -100 })
-        })
+        inView(".scroll-section-right", (element) => {
+            animate(element, { opacity: 1, x: [-100, 0] }, {
+                duration: 0.9,
+                easing: [0.17, 0.55, 0.55, 1],
+            });
+            return () => animate(element, { opacity: 0, x: -100 });
+        });
 
         inView(".scroll-section-up", (element) => {
-            animate(
-                element,
-                { opacity: 1, y: [100, 0], },
-                {
-                    duration: 0.9,
-                    easing: [0.10, 0.55, 0.55, 1],
-                }
-            )
-
-            return () => animate(element, { opacity: 0, y: 100 })
-        })
+            animate(element, { opacity: 1, y: [100, 0] }, {
+                duration: 0.9,
+                easing: [0.10, 0.55, 0.55, 1],
+            });
+            return () => animate(element, { opacity: 0, y: 100 });
+        });
 
         inView(".scroll-section-down", (element) => {
-            animate(
-                element,
-                { opacity: 1, y: [0, 0], },
-                {
-                    duration: 1.1,
-                    easing: [0.10, 0.55, 0.55, 1],
-                }
-            )
-
-            return () => animate(element, { opacity: 0, y: 100 })
-        })
+            animate(element, { opacity: 1, y: [0, 0] }, {
+                duration: 1.1,
+                easing: [0.10, 0.55, 0.55, 1],
+            });
+            return () => animate(element, { opacity: 0, y: 100 });
+        });
 
         inView(".scroll-section-left", (element) => {
-            animate(
-                element,
-                { opacity: 1, x: [0, -10], },
-                {
-                    duration: 0.3,
-                    easing: [0.10, 0.55, 0.55, 1],
-                }
-            )
+            animate(element, { opacity: 1, x: [0, -10] }, {
+                duration: 0.3,
+                easing: [0.10, 0.55, 0.55, 1],
+            });
+            return () => animate(element, { opacity: 0, y: 0 });
+        });
+    } else {
+        console.warn('Motion.js is not loaded');
+    }
 
-            return () => animate(element, { opacity: 0, y: 0 })
-        })
-        // Scroll Section
-
-        // Initialize Lenis
+    // ===== LENIS SMOOTH SCROLL =====
+    if (typeof Lenis !== 'undefined') {
         const lenis = new Lenis({
-        autoRaf: true,
+            autoRaf: true,
         });
 
-        // Listen for the scroll event and log the event data
         lenis.on('scroll', (e) => {
-        console.log(e);
+            console.log(e);
         });
-        
-        // Custom Cursor
-        const targetDiv = document.querySelector('.container');
-        const cursorSource = document.querySelector('.cursor-source');
+    } else {
+        console.warn('Lenis is not loaded');
+    }
 
+    // ===== CUSTOM CURSOR 1 - HERO =====
+    const targetDiv = document.querySelector('.container');
+    const cursorSource = document.querySelector('.cursor-source');
+    
+    if (targetDiv && cursorSource) {
         targetDiv.addEventListener('mouseenter', () => {
-        cursorSource.style.display = 'block';
-        document.body.style.cursor = 'none'; 
+            cursorSource.style.display = 'block';
+            document.body.style.cursor = 'none';
         });
 
         targetDiv.addEventListener('mouseleave', () => {
-        cursorSource.style.display = 'none';
-        document.body.style.cursor = 'default'; 
+            cursorSource.style.display = 'none';
+            document.body.style.cursor = 'default';
         });
 
         document.addEventListener('mousemove', (event) => {
-        cursorSource.style.left = (event.clientX - 25) + 'px'; 
-        cursorSource.style.top = (event.clientY - 25) + 'px'; 
+            cursorSource.style.left = (event.clientX - 25) + 'px';
+            cursorSource.style.top = (event.clientY - 25) + 'px';
         });
+    } else {
+        if (!targetDiv) console.warn('.container element not found');
+        if (!cursorSource) console.warn('.cursor-source element not found');
+    }
 
-        // Optional: Move cursor source with mouse
+    // ===== CUSTOM CURSOR 2 - FOOTER =====
+    const cursorSource2 = document.querySelector('.cursor-source2');
+    if (cursorSource2) {
         document.addEventListener('mousemove', (event) => {
-        cursorSource.style.left = (event.clientX - 1) + 'px';
-        cursorSource.style.top = (event.clientY - 1) + 'px';
+            cursorSource2.style.left = (event.clientX - 25) + 'px';
+            cursorSource2.style.top = (event.clientY - 25) + 'px';
         });
-        // Custom Cursor End
+    } else {
+        console.warn('.cursor-source2 element not found');
+    }
 
-        document.addEventListener('mousemove', (event) => {
-            cursorSource2.style.left = (event.clientX - 25) + 'px'; // Adjust offset as needed
-            cursorSource2.style.top = (event.clientY - 25) + 'px'; // Adjust offset as needed
-        });
-
-        // Custom Cursor 3rd
-        const targetDiv3 = document.querySelector('.container3');
-        const cursorSource3 = document.querySelector('.cursor-source3');
-
+    // ===== CUSTOM CURSOR 3 =====
+    const targetDiv3 = document.querySelector('.container3');
+    const cursorSource3 = document.querySelector('.cursor-source3');
+    
+    if (targetDiv3 && cursorSource3) {
         targetDiv3.addEventListener('mouseenter', () => {
-        cursorSource3.style.display = 'block';
-        document.body.style.cursor = 'none'; 
+            cursorSource3.style.display = 'block';
+            document.body.style.cursor = 'none';
         });
 
         targetDiv3.addEventListener('mouseleave', () => {
-        cursorSource3.style.display = 'none';
-        document.body.style.cursor = 'default'; 
+            cursorSource3.style.display = 'none';
+            document.body.style.cursor = 'default';
         });
 
         document.addEventListener('mousemove', (event) => {
-        cursorSource3.style.left = (event.clientX - 25) + 'px'; 
-        cursorSource3.style.top = (event.clientY - 25) + 'px'; 
+            cursorSource3.style.left = (event.clientX - 25) + 'px';
+            cursorSource3.style.top = (event.clientY - 25) + 'px';
         });
+    } else {
+        if (!targetDiv3) console.warn('.container3 element not found');
+        if (!cursorSource3) console.warn('.cursor-source3 element not found');
+    }
 
-        // Optional: Move cursor source with mouse
-        document.addEventListener('mousemove', (event) => {
-        cursorSource3.style.left = (event.clientX - 1) + 'px';
-        cursorSource3.style.top = (event.clientY - 1) + 'px';
-        });
-        // Custom Cursor 3rd End
+    // ===== HOVER IMAGE TEXT =====
+    const hoverTexts = document.querySelectorAll('.hover-text');
 
-        // Hover Image Text
-        const hoverTexts = document.querySelectorAll('.hover-text');
-
+    if (hoverTexts.length > 0) {
         hoverTexts.forEach(text => {
-        const imageId = text.dataset.target;
-        const image = document.getElementById(imageId);
+            const imageId = text.dataset.target;
+            const image = document.getElementById(imageId);
 
-        text.addEventListener('mouseover', (event) => {
-            image.src = text.dataset.image;
-            image.style.display = 'block';
-            positionImage(event, image);
-        });
+            if (image) {
+                text.addEventListener('mouseover', (event) => {
+                    if (text.dataset.image) {
+                        image.src = text.dataset.image;
+                    }
+                    image.style.display = 'block';
+                    positionImage(event, image);
+                });
 
-        text.addEventListener('mouseout', () => {
-            image.style.display = 'none';
-        });
+                text.addEventListener('mouseout', () => {
+                    image.style.display = 'none';
+                });
 
-        text.addEventListener('mousemove', (event) => {
-            if (image.style.display === 'block') {
-            positionImage(event, image);
+                text.addEventListener('mousemove', (event) => {
+                    if (image.style.display === 'block') {
+                        positionImage(event, image);
+                    }
+                });
+            } else {
+                console.warn(`Image element with ID "${imageId}" not found for hover-text`);
             }
         });
-        });
+    }
 
-        function positionImage(event, image) {
+    // ===== POSITION IMAGE FUNCTION =====
+    function positionImage(event, image) {
         const x = event.clientX + 10;
         const y = event.clientY + 10;
         image.style.left = x + 'px';
         image.style.top = y + 'px';
-        }
-        // Hover Image Text End
+    }
+
+});
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/motion@latest/dist/motion.js" defer></script>
     <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js" defer></script>
-    <script src="./anime.js"></script>
     <script src="https://unpkg.com/powerglitch@latest/dist/powerglitch.min.js" defer></script>
     <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
     <script src="https://unpkg.com/htmx.org@2.0.4" integrity="sha384-HGfztofotfshcF7+8n44JQL2oJmowVChPTg48S+jvZoztPfvwD79OC/LTtG6dMp+" crossorigin="anonymous" defer></script>
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js" defer></script>
 </body>
 
 </html>
