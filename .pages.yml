@@ -1,0 +1,20 @@
+media: public/images
+
+content:
+  - name: posts
+    label: Blog posts
+    type: collection
+    path: content/posts
+    format: md
+    fields:
+      - name: title
+        type: string
+        required: true
+      - name: date
+        type: date
+        required: true
+      - name: draft
+        type: boolean
+        default: false
+      - name: body
+        type: rich-text
