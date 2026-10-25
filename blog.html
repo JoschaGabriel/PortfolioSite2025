@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <title>Joscha Gabriel Portfolio Website</title>
+    <link rel="icon" type="image/x-icon" href="./image/favicon JG.svg">
+    <link rel="stylesheet" href="styleindex.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="https://unpkg.com">
+    <script src="./anime.js" defer></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js" defer></script>
+    <meta name="description" content="I'm Joscha Gabriel. Designer. I Prefer to be a passionate designer, combining aesthetics and problem-solving for intended to be a great user experience. I'm the person if you search for a person who can pull the colorful pallette out of the vase.">
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-331083R9QP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-331083R9QP');
+</script>
+
+    <style>
+        .caveat-im {
+            font-family: "Caveat", serif;
+            font-optical-sizing: auto;
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        .liquid-glass {
+        width: 60px;
+        height: 60px;
+        border-radius: 30px;
+        position: relative;
+        isolation: isolate;
+        box-shadow: 0px 6px 24px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        border: none;
+        background: none;
+        padding: 0;
+        margin: 0;
+        text-decoration: none;
+        cursor: pointer;
+        pointer-events: none; /* Crucial: allows clicks to pass through to elements below */
+        transform: translate(-50%, -50%); /* CENTERS the element on the mouse coordinates */
+        transition: transform 0.1s ease-out, opacity 0.3s ease-in-out; /* Smooth movement and show/hide */
+        z-index: 9999; /* Ensures it's always on top */
+        opacity: 0; /* Start hidden */
+        }
+
+        .liquid-glass:focus {
+        outline: none;
+        }
+
+        .liquid-glass::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        border-radius: 30px;
+        box-shadow: inset 0 0 0px 0px #000000;
+        background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        .liquid-glass::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        border-radius: 30px;
+        backdrop-filter: blur(1px);
+        -webkit-backdrop-filter: blur(1px);
+        filter: url(#glass-distortion);
+        -webkit-filter: url(#glass-distortion);
+        }
+
+        .cursor-circle {
+            fill: transparent; /* No fill for the SVG circle itself */
+            /* You could add a stroke here if you wanted an inner border on the SVG circle */
+            /* stroke: rgba(255, 255, 255, 0.3); */
+            /* stroke-width: 1; */
+        }
+
+        .background-liquid-section {
+            background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='20' height='20' patternTransform='scale(1) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='%23271d1dff'/><path d='M 10,-2.55e-7 V 20 Z M -1.1677362e-8,10 H 20 Z'  stroke-width='1' stroke='%232c1f1fff' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>")
+        }
+    </style>
+
+<body class="bg-[#171717] w-full m-0 overflow-x-hidden">
+    <!-- Header -->
+    <div id="myHeader" class="scroll-section-down justify-between bg-[#17171795] backdrop-blur-md drop-shadow-md py-2 text-[#858585] h-fit w-full border-b-1 border-[#643B27] fixed pt-2 top-0 right-0 left-0 z-50 hidden transition ease-in">
+        <div class="w-full py-4 lg:py-2 px-4 lg:px-24">
+            <div class="flex justify-between">
+                <a href="./index.html">
+                    <div class="my-auto w-20 h-12 overflow-hidden">
+                        <lottie-player class="w-full h-full object-cover" src="./Logo Icon _ Animation.json" background="transparent"  speed="1"  style="width: 80px; height: 60px;" loop autoplay></lottie-player>
+                    </div>
+                </a>
+                <div class="my-auto h-fit lg:flex gap-8 lg:gap-14 text-lg text-[#AD7561] font-semibold hidden">
+                    <a href="./index.html">
+                        <div class="hidden lg:inline">Home</div>
+                    </a>
+                    <a  href="https://joschagabriel.super.site/my-projects">
+                        <div>Project</div>
+                    </a>
+                    <a href="./preamble.html">
+                        <div>Preamble</div>
+                    </a>
+                    <a href="./contact.html">
+                        <div>Contact</div>
+                    </a>
+                </div>
+                <div class="menu-button w-8 my-auto inline lg:hidden">
+                    <img src="./image/menu button.svg" alt="" loading="lazy">
+                </div>
+                <div class="close-button w-8 my-auto hidden">
+                    <img src="./image/menu close button.svg" alt="" loading="lazy">
+                </div>
+            </div>
+        </div>
+        <div id="MobileMenu" class="mobile-menu w-full hidden pt-4">
+            <a href="./index.html">
+                <div id="myDiv" onclick="location.href='your-link.html';" class="menu1 px-6 py-4 bg-[#643B27] active:invert text-[#ECD4C7] font-regular text-2xl">
+                    Home
+                </div>
+            </a>
+            <a href="https://project.joschagabriel.com/">
+                <div id="myDiv" onclick="location.href='your-link.html';" class="menu2 px-6 py-4 bg-[#745545] active:invert text-[#ECD4C7] font-regular text-2xl">
+                    Project
+                </div>
+            </a>
+            <a target="_blank" href="./preamble.html">
+                <div id="myDiv" onclick="location.href='your-link.html';" class="menu3 px-6 py-4 bg-[#465667] active:invert text-[#ECD4C7] font-regular text-2xl">
+                    Preamble
+                </div>
+            </a>
+            <a href="./contact.html">
+                <div id="myDiv" onclick="location.href='your-link.html';" class="menu4 px-6 py-4 bg-[#1C2E41] active:invert text-[#ECD4C7] font-regular text-2xl">
+                    Contact
+                </div>
+            </a>
+        </div>
+
+        <script>
+            const menuButton = document.querySelector('.menu-button');
+            const closeMenu = document.querySelector('.close-button');
+            const mobileMenu = document.querySelector('.mobile-menu');
+
+            menuButton.addEventListener('click', () => {
+            mobileMenu.style.display = 'block';
+            menuButton.style.display = 'none';
+            closeMenu.style.display = 'block';
+            });
+
+            closeMenu.addEventListener('click', () => {
+            mobileMenu.style.display = 'none';
+            menuButton.style.display = 'block';
+            closeMenu.style.display = 'none';
+            });
+        </script>
+    </div>
+    <!-- Header End -->
+
+    <main>
+      <h1>Blog</h1>
+      <ul id="post-list" class="post-list"></ul>
+    </main>
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="/js/blog.js"></script>
+
+    <!-- Footer -->
+    <div class="flex justify-between px-4 lg:px-24 my-6 text-[#858585] h-fit">
+        <a class="flex gap-2 lg:gap-2 hover:brightness-110 cursor-pointer" href="#">
+            <div class="my-auto">
+                <img class="w-10" src="./image/footer icon JG.png" alt="" loading="lazy">
+            </div>
+            <div class="my-auto">2026 © Joscha Gabriel</div>
+        </a>
+        <div class="my-auto h-fit hidden lg:inline">
+            <div class="flex" x-data="{ zone: [] }"
+            x-init="fetch('https://timeapi.io/api/time/current/zone?timeZone=Etc%2FGMT-0')
+                    .then(response => response.json())
+                    .then(data => zone = data)"><span x-text="zone.hour"></span>:<span x-text="zone.minute"></span>:<span class="mr-1"  x-text="zone.seconds"></span>UTC</div>
+            <div class="flex" x-data="{ zone: [] }"
+            x-init="fetch('https://timeapi.io/api/time/current/zone?timeZone=Etc%2FGMT-7')
+                    .then(response => response.json())
+                    .then(data => zone = data)"><span x-text="zone.hour"></span>:<span x-text="zone.minute"></span>:<span class="mr-1"  x-text="zone.seconds"></span>UTC+7</div>
+            <div class="flex" x-data="{ zone: [] }"
+            x-init="fetch('https://timeapi.io/api/time/current/zone?timeZone=Asia%2FTokyo')
+                    .then(response => response.json())
+                    .then(data => zone = data)"><span x-text="zone.hour"></span>:<span x-text="zone.minute"></span>:<span class="mr-1"  x-text="zone.seconds"></span>UTC+9</div>
+        </div>
+        <div class="my-auto flex hidden lg:inline-flex">
+            <div>🚩 Based in Jakarta, Indonesia</div>
+            <div class="animate-ping">|</div>
+        </div>
+        <a class="font-bold text-[#745545] flex gap-0 lg:gap-2 hover:brightness-110 cursor-pointer" href="#">
+            <div class="my-auto">Back to Top</div>
+            <img class="mt-4 animate-bounce h-12 my-auto" src="./image/arrow_backtotop.svg" alt="" loading="lazy">
+        </a>
+    </div>
+    <!-- Footer End -->
+
+    <script type="module">
+        // Wait for DOM and all libraries to load
+document.addEventListener('DOMContentLoaded', () => {
+    
+    // ===== HEADER SCROLL =====
+    const header = document.getElementById('myHeader');
+    const body = document.body;
+    let lastScrollTop = 0;
+  
+    if (header) {
+        window.addEventListener('scroll', () => {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+            if (scrollTop > lastScrollTop) { // Scrolling down
+                header.classList.remove('hidden');
+                body.classList.add('body-padding');
+            } else { // Scrolling up
+                header.classList.add('hidden');
+                body.classList.remove('body-padding');
+            }
+            lastScrollTop = scrollTop;
+        });
+    }
+
+    // ===== HOVER MASTER =====
+    const serviceItems = document.querySelectorAll('[data-targets]');
+    const allItems = document.querySelectorAll('[data-item]');
+
+    if (serviceItems.length > 0) {
+        serviceItems.forEach(item => {
+            const targets = item.dataset.targets.split(',').map(target => target.trim());
+            
+            item.addEventListener('mouseenter', () => {
+                item.style.fontWeight = '600';
+                item.style.color = '#745545';
+
+                allItems.forEach(targetItem => {
+                    if (targets.includes(targetItem.dataset.item)) {
+                        targetItem.style.fontWeight = 'semibold';
+                        targetItem.style.color = "#745545";
+                        targetItem.style.textDecoration = 'underline';
+                    }
+                });
+            });
+
+            item.addEventListener('mouseout', () => {
+                item.style.fontWeight = 'normal';
+                item.style.color = '#C1A090';
+
+                allItems.forEach(targetItem => {
+                    if (targets.includes(targetItem.dataset.item)) {
+                        targetItem.style.fontWeight = 'normal';
+                        targetItem.style.color = "#C1A090";
+                        targetItem.style.textDecoration = 'none';
+                    }
+                });
+            });
+        });
+    }
+
+    // ===== TEXT HOVER EFFECTS =====
+    const textHovers = [
+        { textSelector: '.text-link1', popupSelector: '.image-popup1' },
+        { textSelector: '.text-link2', popupSelector: '.image-popup2' },
+        { textSelector: '.text-link3', popupSelector: '.image-popup3' },
+        { textSelector: '.text-link4', popupSelector: '.image-popup4' }
+    ];
+
+    textHovers.forEach(({ textSelector, popupSelector }) => {
+        const textLink = document.querySelector(textSelector);
+        const popup = document.querySelector(popupSelector);
+
+        if (textLink && popup) {
+            textLink.addEventListener('mouseover', () => {
+                popup.style.display = 'block';
+            });
+
+            textLink.addEventListener('mouseout', () => {
+                popup.style.display = 'none';
+            });
+        }
+    });
+
+    // ===== ANIME.JS ANIMATIONS =====
+    if (typeof anime !== 'undefined') {
+        const animationTargets = [
+            { selector: '.main-text-logo', delay: 10 },
+            { selector: '.main-text-hi', delay: 200 },
+            { selector: '.main-text-in', delay: 400 },
+            { selector: '.main-text-ui', delay: 600 },
+            { selector: '.main-text-link', delay: 800 }
+        ];
+
+        animationTargets.forEach(({ selector, delay }) => {
+            const elements = document.querySelectorAll(selector);
+            if (elements.length > 0) {
+                anime({
+                    delay: delay,
+                    opacity: 100,
+                    targets: elements,
+                    translateY: -20,
+                    duration: 3000,
+                    easing: 'easeInOutQuad',
+                });
+            }
+        });
+    } else {
+        console.warn('anime.js is not loaded');
+    }
+
+    // ===== POWERGLITCH =====
+    if (typeof PowerGlitch !== 'undefined') {
+        const glitchElements = document.querySelector('.glitch');
+        if (glitchElements) {
+            PowerGlitch.glitch('.glitch', {
+                "playMode": "hover",
+                "optimizeSeo": true,
+                "createContainers": true,
+                "hideOverflow": false,
+                "timing": {
+                    "duration": 2000
+                },
+                "glitchTimeSpan": {
+                    "start": 0.1,
+                    "end": 0.4
+                },
+                "shake": {
+                    "velocity": 15,
+                    "amplitudeX": 0.2,
+                    "amplitudeY": 0.2
+                },
+                "slice": {
+                    "count": 6,
+                    "velocity": 15,
+                    "minHeight": 0.02,
+                    "maxHeight": 0.15,
+                    "hueRotate": 0,
+                },
+                "pulse": false
+            });
+        }
+    } else {
+        console.warn('PowerGlitch is not loaded');
+    }
+
+    // ===== POPUP =====
+    const popup = document.querySelector('.popup');
+    const closeButton = document.getElementById('closePopup');
+    let hasShown = false;
+
+    if (popup && closeButton) {
+        closeButton.addEventListener('click', () => {
+            popup.style.display = 'none';
+            hasShown = true;
+        });
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY === 0 && hasShown) {
+                popup.style.display = 'block';
+                hasShown = false;
+            }
+        });
+    }
+
+    // ===== MOTION.JS SCROLL ANIMATIONS =====
+    if (typeof window.Motion !== 'undefined') {
+        const { animate, inView } = window.Motion;
+
+        const scrollAnimations = [
+            { selector: '.menu1', y: -100, duration: 180 },
+            { selector: '.menu2', y: -150, duration: 190 },
+            { selector: '.menu3', y: -200, duration: 200 },
+            { selector: '.menu4', y: -250, duration: 210 }
+        ];
+
+        scrollAnimations.forEach(({ selector, y, duration }) => {
+            const elements = document.querySelectorAll(selector);
+            if (elements.length > 0) {
+                inView(selector, (element) => {
+                    animate(element, { opacity: 1, x: 0, y: 0 });
+                    return () => animate(element, { opacity: 0, y: y, duration: duration });
+                });
+            }
+        });
+
+        inView(".scroll-section-right", (element) => {
+            animate(element, { opacity: 1, x: [-100, 0] }, {
+                duration: 0.9,
+                easing: [0.17, 0.55, 0.55, 1],
+            });
+            return () => animate(element, { opacity: 0, x: -100 });
+        });
+
+        inView(".scroll-section-up", (element) => {
+            animate(element, { opacity: 1, y: [100, 0] }, {
+                duration: 0.9,
+                easing: [0.10, 0.55, 0.55, 1],
+            });
+            return () => animate(element, { opacity: 0, y: 100 });
+        });
+
+        inView(".scroll-section-down", (element) => {
+            animate(element, { opacity: 1, y: [0, 0] }, {
+                duration: 1.1,
+                easing: [0.10, 0.55, 0.55, 1],
+            });
+            return () => animate(element, { opacity: 0, y: 100 });
+        });
+
+        inView(".scroll-section-left", (element) => {
+            animate(element, { opacity: 1, x: [0, -10] }, {
+                duration: 0.3,
+                easing: [0.10, 0.55, 0.55, 1],
+            });
+            return () => animate(element, { opacity: 0, y: 0 });
+        });
+    } else {
+        console.warn('Motion.js is not loaded');
+    }
+
+    // ===== LENIS SMOOTH SCROLL =====
+    if (typeof Lenis !== 'undefined') {
+        const lenis = new Lenis({
+            autoRaf: true,
+        });
+
+        lenis.on('scroll', (e) => {
+            console.log(e);
+        });
+    } else {
+        console.warn('Lenis is not loaded');
+    }
+
+    // ===== CUSTOM CURSOR 1 - HERO =====
+    const targetDiv = document.querySelector('.container');
+    const cursorSource = document.querySelector('.cursor-source');
+    
+    if (targetDiv && cursorSource) {
+        targetDiv.addEventListener('mouseenter', () => {
+            cursorSource.style.display = 'block';
+            document.body.style.cursor = 'none';
+        });
+
+        targetDiv.addEventListener('mouseleave', () => {
+            cursorSource.style.display = 'none';
+            document.body.style.cursor = 'default';
+        });
+
+        document.addEventListener('mousemove', (event) => {
+            cursorSource.style.left = (event.clientX - 25) + 'px';
+            cursorSource.style.top = (event.clientY - 25) + 'px';
+        });
+    } else {
+        if (!targetDiv) console.warn('.container element not found');
+        if (!cursorSource) console.warn('.cursor-source element not found');
+    }
+
+    // ===== CUSTOM CURSOR 2 - FOOTER =====
+    const cursorSource2 = document.querySelector('.cursor-source2');
+    if (cursorSource2) {
+        document.addEventListener('mousemove', (event) => {
+            cursorSource2.style.left = (event.clientX - 25) + 'px';
+            cursorSource2.style.top = (event.clientY - 25) + 'px';
+        });
+    } else {
+        console.warn('.cursor-source2 element not found');
+    }
+
+    // ===== CUSTOM CURSOR 3 =====
+    const targetDiv3 = document.querySelector('.container3');
+    const cursorSource3 = document.querySelector('.cursor-source3');
+    
+    if (targetDiv3 && cursorSource3) {
+        targetDiv3.addEventListener('mouseenter', () => {
+            cursorSource3.style.display = 'block';
+            document.body.style.cursor = 'none';
+        });
+
+        targetDiv3.addEventListener('mouseleave', () => {
+            cursorSource3.style.display = 'none';
+            document.body.style.cursor = 'default';
+        });
+
+        document.addEventListener('mousemove', (event) => {
+            cursorSource3.style.left = (event.clientX - 6) + 'px';
+            cursorSource3.style.top = (event.clientY - 4) + 'px';
+        });
+    } else {
+        if (!targetDiv3) console.warn('.container3 element not found');
+        if (!cursorSource3) console.warn('.cursor-source3 element not found');
+    }
+
+    // ===== HOVER IMAGE TEXT =====
+    const hoverTexts = document.querySelectorAll('.hover-text');
+
+    if (hoverTexts.length > 0) {
+        hoverTexts.forEach(text => {
+            const imageId = text.dataset.target;
+            const image = document.getElementById(imageId);
+
+            if (image) {
+                text.addEventListener('mouseover', (event) => {
+                    if (text.dataset.image) {
+                        image.src = text.dataset.image;
+                    }
+                    image.style.display = 'block';
+                    positionImage(event, image);
+                });
+
+                text.addEventListener('mouseout', () => {
+                    image.style.display = 'none';
+                });
+
+                text.addEventListener('mousemove', (event) => {
+                    if (image.style.display === 'block') {
+                        positionImage(event, image);
+                    }
+                });
+            } else {
+                console.warn(`Image element with ID "${imageId}" not found for hover-text`);
+            }
+        });
+    }
+
+    // ===== POSITION IMAGE FUNCTION =====
+    function positionImage(event, image) {
+        const x = event.clientX + 10;
+        const y = event.clientY + 10;
+        image.style.left = x + 'px';
+        image.style.top = y + 'px';
+    }
+
+});
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/motion@latest/dist/motion.js" defer></script>
+    <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js" defer></script>
+    <script src="https://unpkg.com/powerglitch@latest/dist/powerglitch.min.js" defer></script>
+    <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <script src="https://unpkg.com/htmx.org@2.0.4" integrity="sha384-HGfztofotfshcF7+8n44JQL2oJmowVChPTg48S+jvZoztPfvwD79OC/LTtG6dMp+" crossorigin="anonymous" defer></script>
+</body>
+
+</html>
