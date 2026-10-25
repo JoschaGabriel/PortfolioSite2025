@@ -4,17 +4,49 @@ content:
   - name: posts
     label: Blog posts
     type: collection
-    path: posts
+    path: content/posts
     format: md
+    filename:
+      template: "{year}-{month}-{day}-{slug}"
     fields:
       - name: title
+        label: Post title
         type: string
         required: true
+
       - name: date
+        label: Publish date
         type: date
         required: true
+        options:
+          format: yyyy-MM-dd
+
+      - name: slug
+        label: URL slug
+        type: string
+        description: Leave blank to derive from the filename.
+
       - name: draft
+        label: Draft (hide from the site)
         type: boolean
-        default: false
+        default: true
+
+      - name: description
+        label: Summary
+        type: text
+        description: Shown on the blog listing and in search/social previews.
+
+      - name: image
+        label: Cover image
+        type: image
+
+      - name: tags
+        label: Tags
+        type: list
+        field:
+          name: tag
+          type: string
+
       - name: body
+        label: Content
         type: rich-text
