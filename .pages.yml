@@ -4,7 +4,7 @@ content:
   - name: posts
     label: Blog posts
     type: collection
-    path: content/posts
+    path: posts
     format: md
     fields:
       - name: title
