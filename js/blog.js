@@ -1,6 +1,6 @@
 // js/blog.js
-const SPACE_ID = "PASTE_SPACE_ID";
-const ACCESS_TOKEN = "PASTE_CDA_TOKEN";
+const SPACE_ID = "6m78ew60enow";
+const ACCESS_TOKEN = "Nwy7_jdkVg1PLiDxMP-srrdSqFKGz8zCYWW1aRbnLbM";
 const API = `https://cdn.contentful.com/spaces/${SPACE_ID}/environments/master`;
 
 const esc = (s = "") =>
